@@ -1,0 +1,571 @@
+@use '../inc/vars' as *;
+.header {
+  // overflow: auto;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding-top: 30px;
+  display: flex;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+    padding-top: 15px;
+    
+    &::after {
+      left: 0;
+      right: 0;
+      content:'';
+      position: absolute;
+      height: 220px;
+      background: url(../img/svg/hover-menu-element.svg) right bottom no-repeat;
+      background-size: contain;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+      flex-shrink: 0;
+
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+  &__burger {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: $text;
+    height: 35px;
+    @media(max-width: $xl){
+        
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      font-size: 20px;
+      height: 20px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    &:hover {
+      .header__burger-text-el {
+        transform: translateY(-35px);
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+          transform: translateY(-20px);
+        }
+        @media(max-width: $xs){
+        
+        }
+      }
+    }
+  }
+  &__burger-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    height: 31px;
+    @media(max-width: $xl){
+        
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      height: 20px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    &--closed {
+
+    }
+    &--open {
+      opacity: 0;
+      margin-top: -35px;
+      @media(max-width: $xl){
+        
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        margin-top: -20px;
+      }
+      @media(max-width: $xs){
+      
+      }
+    }
+  }
+  &__burger-text-el {
+    transform: translateY(0);
+    transition: .5s all;
+    line-height: 1;
+  }
+  &__bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    visibility: hidden;
+  }
+  &__bg-el {
+    width: 25%;
+    background: $text;
+    height: 0;
+    &:nth-of-type(1) {
+      
+    }
+    &:nth-of-type(2) {
+      
+    }
+    &:nth-of-type(3) {
+      
+    }
+    &:nth-of-type(4) {
+      
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    max-width: 90%;
+    @media(max-width: 1615px){
+      max-width: 1500px;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+  }
+  &__logo {
+    position: relative;
+    top: -5px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      top: 0px;
+      max-width: 120px;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__menu {
+    display: flex;
+    visibility: hidden;
+    //position: absolute;
+    flex-direction: column;
+    top: 14vh;
+    bottom: 14vh;
+    right: 0;
+    padding: 0 25px;
+    align-items: flex-end;
+    gap: 5vh;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 0;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+      padding: 0 20px;
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      padding: 0;
+      align-items: flex-start;
+      right: auto;
+      left: 0px;
+      bottom: 0;
+      top: 100px;
+      margin-top: 0px;
+      gap: 35px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .dropdown--language {
+      display: none;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        display: block;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+  }
+  &__menu-list {
+    font-size: 7.2vh;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+    overflow: hidden;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      text-align: left;
+      font-size: 40px;
+      gap: 30px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__menu-list-el {
+    opacity: 0;
+    transform: translateX(100%);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background: url(../img/svg/hover-menu-element.svg);
+      background-size: 141vh 84vh;
+      background-position: right top;
+      background-repeat: no-repeat;
+      width: 0px;
+      height: 84vh;
+      top: 0vh;
+      right: -27vh;
+      transition: 0.3s all;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        display: none;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+    &:hover {
+      &::before {
+        width: 141vh;
+      }
+      .header__menu-list-link {
+        color: $text;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+          color: $text-light;
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+      }
+    }
+  }
+  &__menu-list-link {
+    color: $text-light;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      justify-content: flex-start;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .dropdown--language {
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        display: none;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+    }
+  }
+  &.active {
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      overflow: auto;
+      max-width: 100vw;
+      overflow-x: hidden;
+      // padding-bottom: 240px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    .header {
+      &__bg {
+        visibility: visible;
+      }
+      &__bg-el {
+        
+        height: 100%;
+        &:nth-of-type(1) {
+          transition: height 0.5s 0s;
+        }
+        &:nth-of-type(2) {
+          transition: height 0.5s 0.4s;
+        }
+        &:nth-of-type(3) {
+          transition: height 0.5s 0.8s;
+        }
+        &:nth-of-type(4) {
+          transition: height 0.5s 1.2s;
+        }
+      }
+      &__burger {
+        color: $text-light;
+        transition: color 0s 1.5s;
+        
+        
+        .header__burger-text--closed {
+          opacity: 0;
+          transition: opacity 0s 1.6s;
+        }
+        .header__burger-text--open {
+          opacity: 1;
+          transition: opacity 0s 1.6s;
+        }
+      }
+      &__logo {
+        svg {
+          * {
+            transition: all 0.3s 0.2s;
+            fill: #fff !important;
+          }
+        }
+      }
+      &__menu {
+        height: auto;
+        visibility: visible;
+        transition: all 0s 1.5s;
+        @media(max-width: $xl){
+          
+        }
+        @media(max-width: $lg){
+          
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+          margin-top: 100px;
+        
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+      }
+      &__menu-list {
+        overflow: visible;
+      }
+      &__menu-list-el {
+        transition: opacity 0.5s 0s, transform 0.5s 0s;
+        opacity: 1;
+        transform: translateX(0%);
+        &:nth-of-type(1) {
+          transition-delay: 1.6s, 1.6s;
+        }
+        &:nth-of-type(2) {
+          transition-delay: 1.75s, 1.75s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 1.9s, 1.9s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 2.05s, 2.05s;
+        }
+        &:nth-of-type(5) {
+          transition-delay: 2.2s, 2.2s;
+        }
+      }
+      &__menu-list-link {
+    
+      }
+    }
+    .dropdown {
+      &__title {
+        background: $text;
+        border-color: $green;
+        color: $green;
+        &::after {
+          border-color: $green;
+        }
+        &:hover {
+          background: $green;
+          color: $text;
+          &::after {
+            border-color: $text;
+          }
+        }
+      }
+      &__menu {
+        background: $text;
+        border-color: $green;
+        * {
+          color: $green;
+          &:hover {
+            background-color: $green;
+            color: $text;
+          }
+        }
+      }
+    }
+    &::after {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.5s 2s;
+
+    }
+  }
+}

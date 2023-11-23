@@ -1,0 +1,28 @@
+$xl: 1499px;
+$lg: 1199px;
+$md: 991px;
+$sm: 767px;
+$xs: 480px;
+// colors
+$bg: #E8E1D6;
+$text: #3C3D3F;
+$text-light: #ffffff;
+$blue: #B7C7D8;
+$green: #CED2C9;
+// fonts
+$mainFont: 'Fixel', sans-serif;
+$secondaryFont: 'Nyght Serif', sans-serif;
+//
+
+
+@mixin itemGrid($n, $gap) {
+  width: calc(100% / #{$n} - #{$gap}px + #{$gap}px / #{$n});
+  margin-right: #{$gap}px;
+  &:nth-child(#{$n + 1}n){
+    margin-right: #{$gap}px;
+  }
+  &:nth-child(#{$n}n){
+    margin-right: 0;
+  }
+}
+

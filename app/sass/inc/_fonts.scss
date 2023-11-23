@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Fixel';
+  src: url('../fonts/fixel/FixelText-Regular.eot');
+  src: local('Fixel Text Regular'), local('FixelText-Regular'),
+      url('../fonts/fixel/FixelText-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/fixel/FixelText-Regular.woff2') format('woff2'),
+      url('../fonts/fixel/FixelText-Regular.woff') format('woff'),
+      url('../fonts/fixel/FixelText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel';
+  src: url('../fonts/fixel/FixelText-Medium.eot');
+  src: local('Fixel Text Regular'), local('FixelText-Medium'),
+      url('../fonts/fixel/FixelText-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/fixel/FixelText-Medium.woff2') format('woff2'),
+      url('../fonts/fixel/FixelText-Medium.woff') format('woff'),
+      url('../fonts/fixel/FixelText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+@font-face {
+  font-family: 'Nyght Serif';
+  src: url('../fonts/nyght-serif/OTF/NyghtSerif-Regular.otf');
+  src: local('Nyght Serif Regular'), local('NyghtSerif-Regular'),
+      url('../fonts/nyght-serif/OTF/NyghtSerif-Regular.otf') format('opentype'),
+      url('../fonts/nyght-serif/WEB/NyghtSerif-Regular.woff2') format('woff2'),
+      url('../fonts/nyght-serif/WEB/NyghtSerif-Regular.woff') format('woff'),
+      url('../fonts/nyght-serif/TTF/NyghtSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nyght Serif';
+  src: url('../fonts/nyght-serif/OTF/NyghtSerif-Light.otf');
+  src: local('Nyght Serif Light'), local('NyghtSerif-Light'),
+      url('../fonts/nyght-serif/OTF/NyghtSerif-Light.otf') format('opentype'),
+      url('../fonts/nyght-serif/WEB/NyghtSerif-Light.woff2') format('woff2'),
+      url('../fonts/nyght-serif/WEB/NyghtSerif-Light.woff') format('woff'),
+      url('../fonts/nyght-serif/TTF/NyghtSerif-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nyght Serif';
+  src: url('../fonts/nyght-serif/OTF/NyghtSerif-BoldItalic.otf');
+  src: local('Nyght Serif Bold Italic'), local('NyghtSerif-BoldItalic'),
+      url('../fonts/nyght-serif/OTF/NyghtSerif-BoldItalic.otf') format('opentype'),
+      url('../fonts/nyght-serif/WEB/NyghtSerif-BoldItalic.woff2') format('woff2'),
+      url('../fonts/nyght-serif/WEB/NyghtSerif-BoldItalic.woff') format('woff'),
+      url('../fonts/nyght-serif/TTF/NyghtSerif-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}

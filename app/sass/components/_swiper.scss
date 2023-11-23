@@ -1,0 +1,138 @@
+.swiper {
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: calc(100% + 20px);
+    z-index: 1;
+    margin: auto;
+    gap: 30px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__nav-el {
+    cursor: pointer;
+
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default;
+
+    }
+    &--prev {
+      transform: rotate(180deg);
+    }
+    &--next {
+      
+    }
+
+    &.button-arrow {
+      min-width: 106px;
+      min-height: 0;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+        min-width: 90px;
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+      &::after {
+        width: 106px;
+        height: 106px;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+          width: 90px;
+          height: 89px;
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: none;
+        width: 41%;
+      }
+
+    }
+  }
+
+
+}
+
+.swiper-pagination {
+  display: none;
+  gap: 6px;
+  justify-content: center;
+  position: static;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media(max-width: $xl){
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    display: flex;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
+
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  border: 1px solid $text;
+  background-color: transparent !important;
+  opacity: 1;
+  &-active {
+    background-color: $text !important;
+    width: 30px;
+  }
+}

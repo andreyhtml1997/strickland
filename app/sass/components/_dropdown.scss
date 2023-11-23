@@ -1,0 +1,77 @@
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  &__title {
+
+    border: 1px solid $text;
+    border-radius: 12px;
+    padding: 6px 12px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &::after {
+      width: 7px;
+      height: 7px;
+      border: 1px solid $text;
+      content: '';
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg) translateY(-2px) translateX(-2px);
+      display: flex;
+      transition: 0.3s all;
+    }
+    &:hover {
+      background: $text;
+      color: $text-light;
+      &:after {
+        border-color: $text-light;
+      }
+    }
+  }
+  &__menu {
+    width: 100%;
+    margin-top: -1px;
+    background-color: transparent;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 1px solid $text;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  }
+  &__menu-el {
+    color: $text;
+    &:hover {
+      background-color: $text;
+      color: $text-light;
+      .dropdown__menu-link {
+        background-color: $text;
+        color: $text-light;
+      }
+    }
+    
+  }
+  &__menu-link {
+    display: flex;
+    padding: 3px 12px;
+    color: $text;
+  }
+  &.active {
+    .dropdown {
+      &__title {
+        &::after {
+          transform: rotate(225deg) translateY(-2px) translateX(-2px);
+        }
+      }
+      &__menu {
+        display: flex;
+      }
+      &__title {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+}
