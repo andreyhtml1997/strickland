@@ -1,243 +1,16 @@
 .button {
-  padding: 17px 30px;
-  display: inline-block;
-  border: 1px solid;
-  font-size: 22px;
-  border-radius: 20px;
-  text-align: center;
-  min-width: 200px;
-  @media(max-width: $xl){
   
-  }
-  @media(max-width: $lg){
-  
-  }
-  @media(max-width: $md){
-    font-size: 16px;
-    padding: 15px 30px;
-    border-radius: 15px;
-    min-width: 160px;
-  }
-  @media(max-width: $sm){
-  
-  }
-  @media(max-width: $xs){
-    min-width: auto;
-  }
-  
-  &--stroke {
-    color: $text;
-    background: transparent;
-    &:hover {
-      background: $text;
-      color: $text-light;
-      border-color: $text;
-      svg {
-        * {
-          fill: $text-light;
-        }
-      }
-    }
-  }
-  &--light {
-    background-color: $text-light;
-    color: $text;
-    &:hover {
-      background-color: $text;
-      color: $text-light;
-    }
-  }
-  &--small {
-    font-size: 18px;
-    padding: 0 20px;
-    min-width: auto;
-    border-radius: 15px;
-    height: 45px;
-    line-height: 43px;
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-    
-    }
-    @media(max-width: $md){
-      
-    }
-    @media(max-width: $sm){
-      font-size: 14px;
-    }
-    @media(max-width: $xs){
-    
-    }
-    
-  }
-  svg {
-    height: 23px;
-    margin-bottom: -4px;
-    margin-right: 4px;
-  }
+}
+.button-coppalse {
+
+}
+.read-more {
+
 }
 
-
-.button-arrow {
-  height: 126px;
-  min-width: 126px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: $text;
-  padding-bottom: 2px;
-  @media(max-width: $xl){
+.button-pen {
   
-  }
-  @media(max-width: $lg){
-    height: 90px;
-    min-width: 90px;
-  }
-  @media(max-width: $md){
-    
-  }
-  @media(max-width: $sm){
-  
-  }
-  @media(max-width: $xs){
-  
-  }
-  
-  &__text {
-    font-size: 25px;
-    margin-right: 20px;
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-      font-size: 20px;
-      margin-right: 10px;
-    }
-    @media(max-width: $md){
-      
-    }
-    @media(max-width: $sm){
-    
-    }
-    @media(max-width: $xs){
-    
-    }
-    
-  }
-  svg {
-    margin-right: -55px;
-    transition: transform 0.3s;
-    z-index: 1;
-    height: auto;
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-      width: 50px;
-      margin-right: -35px;
-    }
-    @media(max-width: $md){
-      
-    }
-    @media(max-width: $sm){
-    
-    }
-    @media(max-width: $xs){
-    
-    }
-    
-  }
-  &::after {
-    width: 126px;
-    height: 126px;
-    border-radius: 100%;
-    border: 1px solid $text;
-    content: '';
-    display: flex;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-      height: 90px;
-      width: 90px;
-    }
-    @media(max-width: $md){
-      
-    }
-    @media(max-width: $sm){
-      
-    }
-    @media(max-width: $xs){
-    
-    }
-    
-  }
-  &:hover {
-    &::after {
-      background: $text;
-    }
-    svg {
-      transform: translateX(40px);
-      @media(max-width: $xl){
-      
-      }
-      @media(max-width: $lg){
-        transform: translateX(35px);
-      }
-      @media(max-width: $md){
-        
-      }
-      @media(max-width: $sm){
-      
-      }
-      @media(max-width: $xs){
-      
-      }
-      
-      path {
-        stroke: $text-light;
-      }
-    }
-  }
-  &--md-no-arrow {
-    @media(max-width: $xl){
-    
-    }
-    @media(max-width: $lg){
-    
-    }
-    @media(max-width: $md){
-      min-width: auto;
-      border: 1px solid;
-      height: 50px;
-      padding: 0 20px;
-      min-width: 145px;
-      border-radius: 15px;
-      &::after {
-        display: none;
-        
-      }
-      svg {
-        display: none;
-      }
-      .button-arrow{
-        &__text {
-          margin: auto;
-        }
-      }
-    }
-    @media(max-width: $sm){
-    
-    }
-    @media(max-width: $xs){
-    
-    }
-  }
 }
-
 
 .button-container {
 display: flex;
@@ -253,13 +26,13 @@ gap: 20px;
   width: 125px;
   height: 125px;
   border-radius: 100%;
-  border: 1px solid $text;
+  border: 1px solid $black;
   transition: 0.5s all;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background: $text;
+  background: $black;
   z-index: 1;
   @media(max-width: $xl){
   
@@ -297,15 +70,15 @@ gap: 20px;
     
     * {
       fill: none !important;
-      stroke: $text-light;
+      stroke: $white;
     }
   }
   &:hover {
-    border-color: $text;
+    border-color: $black;
     background-color: transparent;
     svg {
       * {
-        stroke: $text;
+        stroke: $black;
       }
     }
   }

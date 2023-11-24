@@ -3,7 +3,7 @@
   position: relative;
   &__title {
 
-    border: 1px solid $text;
+    border: 1px solid $black;
     border-radius: 12px;
     padding: 6px 12px;
     background-color: transparent;
@@ -13,7 +13,7 @@
     &::after {
       width: 7px;
       height: 7px;
-      border: 1px solid $text;
+      border: 1px solid $black;
       content: '';
       border-top: none;
       border-left: none;
@@ -22,10 +22,10 @@
       transition: 0.3s all;
     }
     &:hover {
-      background: $text;
-      color: $text-light;
+      background: $black;
+      color: $white;
       &:after {
-        border-color: $text-light;
+        border-color: $white;
       }
     }
   }
@@ -35,20 +35,20 @@
     background-color: transparent;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    border: 1px solid $text;
+    border: 1px solid $black;
     overflow: hidden;
     display: none;
     flex-direction: column;
     position: absolute;
   }
   &__menu-el {
-    color: $text;
+    color: $black;
     &:hover {
-      background-color: $text;
-      color: $text-light;
+      background-color: $black;
+      color: $white;
       .dropdown__menu-link {
-        background-color: $text;
-        color: $text-light;
+        background-color: $black;
+        color: $white;
       }
     }
     
@@ -56,7 +56,7 @@
   &__menu-link {
     display: flex;
     padding: 3px 12px;
-    color: $text;
+    color: $black;
   }
   &.active {
     .dropdown {

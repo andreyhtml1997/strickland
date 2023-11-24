@@ -1,2 +1,297 @@
 @use '../inc/media' as *;
 @use '../inc/vars' as *;
+
+
+.hero {
+  .container {
+
+  }
+  &__img {
+
+  }
+  &__content {
+
+  }
+  &__blockquote-container {
+
+  }
+  &__blockquote {
+
+  }
+  &__sign {
+    img {
+
+    }
+  }
+  &__author {
+
+  }
+  &__author-post {
+
+  }
+  &__author-name {
+
+  }
+}
+
+
+.bio {
+  .container {
+
+  }
+  .section__title {
+
+  }
+  &__subtitle {
+
+  }
+  .row {
+    & > * {
+
+    }
+  }
+  &__img {
+
+  }
+  &__text {
+    p {
+
+    }
+  }
+  .read-more {
+
+  }
+}
+
+
+.press {
+  .container {
+
+  }
+  .section__title {
+
+  }
+  &__row {
+    &:nth-child(odd) {
+      
+    }
+    &:nth-child(even) {
+      
+    }
+  }
+  &__el {
+
+  }
+  &__el-logo {
+    img {
+
+    }
+  }
+  &__el-arrow {
+
+  }
+}
+
+
+
+.books {
+  .container {
+
+  }
+  .row {
+
+  }
+  .section__title {
+
+  }
+  &__text {
+
+  }
+  &__el {
+
+  }
+  &__el-description {
+
+  }
+  &__el-title {
+
+  }
+  &__el-price {
+
+  }
+  &__el-img {
+
+  }
+
+
+
+
+
+
+  &--section {
+    .section__title {
+
+    }
+    .books {
+      &__text {
+
+      }
+      &__el {
+
+      }
+      &__el-img {
+    
+      }
+      &__el-description {
+        
+      }
+      &__el-description-left {
+        
+      }
+      &__el-title {
+    
+      }
+      &__el-price {
+    
+      }
+      .button-collapse {
+
+      }
+      
+    }
+  }
+}
+
+
+
+
+
+.events {
+  .container {
+
+  }
+}
+
+.events-list {
+  &__el {
+
+  }
+  .row {
+
+  }
+  &__el-main {
+
+  }
+  &__el-title {
+
+  }
+  &__el-img {
+
+  }
+
+  &__date {
+    * {
+
+    }
+  }
+  &__address {
+
+  }
+}
+
+
+
+.blog {
+  .container {
+
+  }
+  .section__title {
+
+  }
+  &__content {
+
+  }
+  &__el {
+    a {
+      display: block;
+    }
+  }
+  &__el-img {
+
+  }
+  &__el-description {
+
+  }
+  &__el-date {
+
+  }
+  &__el-text {
+
+  }
+  &__el-title {
+
+  }
+  &__el-short {
+
+  }
+}
+
+
+.socials {
+  .container {
+
+  }
+  .section__title {
+    
+  }
+  &__header {
+
+  }
+  &__title {
+
+  }
+  .socials-card {
+  
+  }
+
+  .insta-block {
+    a {
+      img {
+
+      }
+    }
+  }
+}
+
+
+.collabs {
+  .container {
+
+  }
+  .section__title {
+    
+  }
+}
+.collabs-list {
+  &__el {
+    .button-collapse {
+
+    }
+  }
+  &__el-name {
+
+  }
+  &__el-post {
+
+  }
+}
+
+
+
+.prefooter {
+  &__content {
+    img {
+      
+    }
+  }
+}

@@ -6,7 +6,7 @@
   width: 125px;
   height: 125px;
   border-radius: 100%;
-  border: 1px solid $text;
+  border: 1px solid $black;
   transition: 0.5s all;
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: $text;
+  background: $black;
   z-index: 1;
   transform: rotate(-90deg);
   padding:23px;
@@ -40,15 +40,15 @@
   svg {
     * {
       fill: none !important;
-      stroke: $text-light;
+      stroke: $white;
     }
   }
   &:hover {
-    border-color: $text;
-    background-color: $text-light;
+    border-color: $black;
+    background-color: $white;
     svg {
       * {
-        stroke: $text;
+        stroke: $black;
       }
     }
   }

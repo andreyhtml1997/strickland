@@ -12,7 +12,7 @@
             <blockquote class="hero__blockquote">
               Сприймай себе – таким, як є. Не бійся радості та суму. Ти є для себе найцінніше, що мав та маєш, будеш мати. Відвертим буть самим з собою...
             </blockquote>
-            <figcaption>
+            <figcaption class="hero__sign">
               <img src="../img/sign.png" alt="Підпис автора">
             </figcaption>
           </figure>
@@ -28,24 +28,335 @@
       <div class="container">
         <h2 class="h4 section__title">Біографія</h2>
         <p class="text-large bio__subtitle">Прихильниця раціонального індивідуалізму. <b>Любов до літератури</b> виникла як наслідок боротьби з суспільством та самою собою.</p>
-        <div class="row">
+        <figure class="row">
           <div class="col-xl-4 offset-xl-3">
-            
+            <img src="../img/bio-small.jpg" alt="Ольга Стрікленд" class="bio__img">
           </div>
-          <div class="col-xl-3 offset-xl-1">
+          <figcaption class="col-xl-3 offset-xl-1">
             <div class="bio__text">
               <p>Виросла на книгах таких авторів, як А.Ренд, Д.Д.Селінджер, С.Моем, В.Франкл. З дванадцяти років почала писати поезію та короткі оповідання. </p>
               <p>Проте під впливом публічного натиску не в змозі отримати підтримки вступає в ПКМК та закінчує спеціальність «Фельдшер», пізніше перекваліфікувалась у сомельє.</p>
             </div>
-            <button data-src="#bio-extended" class="read-more" data-fancybox="bio-extended">Читати більше</button>
-          </div>
-        </div>
+            <button data-src="#bio-extended" class="button read-more" data-fancybox="bio-extended">
+              <span class="button__text">Читати більше</span>
+              <span class="button__graphic-el"></span>
+            </button>
+          </figcaption>
+        </figure>
 
       </div>
     </section>
-    <a href="img/hero-bg-full.jpg" data-fancybox data-caption="Single image">
-      asdadasdasd
-    </a>
+    <section class="section press">
+      <div class="container">
+        <h2 class="h4 section__title">Згадування у пресі</h2>
+        <div class="press__row">
+          <a href="#" class="press__el">
+            <span class="press__el-logo">
+              <img src="img/svg/icon-espresso.svg" alt="Еспресо">
+            </span>
+            <span class="press__el-arrow"></span>
+          </a>
+          <a href="#" class="press__el">
+            <span class="press__el-logo">
+              <img src="img/svg/icon-vogue.svg" alt="Vogue">
+            </span>
+            <span class="press__el-arrow"></span>
+          </a>
+        </div>
+        <div class="press__row">
+          <a href="#" class="press__el">
+            <span class="press__el-logo">
+              <img src="img/svg/icon-pravda.svg" alt="Українська правда">
+            </span>
+            <span class="press__el-arrow"></span>
+          </a>
+          <a href="#" class="press__el">
+            <span class="press__el-logo">
+              <img src="img/svg/icon-chas.svg" alt="chas.news">
+            </span>
+            <span class="press__el-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section books">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3">
+            <h2 class="h4 section__title">Книги</h2>
+          </div>
+          <div class="col-xl-4">
+            <h2 class="h2 text-light books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
+            
+            <figure class="books__el" data-fancybox="books" data-src="#book1">
+              <figcaption class="books__el-description">
+                <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                <div class="books__el-price">450.00₴</div>
+              </figcaption>
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+            </figure>
+            <figure class="books__el" data-fancybox="books" data-src="#book2">
+              <figcaption class="books__el-description">
+                <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                <div class="books__el-price">450.00₴</div>
+              </figcaption>
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+            </figure>
+          </div>
+          <div class="col-xl-4 offset-lg-1">
+            <figure class="books__el" data-fancybox="books" data-src="#book3">
+              <figcaption class="books__el-description">
+                <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                <div class="books__el-price">450.00₴</div>
+              </figcaption>
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+            </figure>
+            <figure class="books__el" data-fancybox="books" data-src="#book4">
+              <figcaption class="books__el-description">
+                <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                <div class="books__el-price">450.00₴</div>
+              </figcaption>
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section books books--section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3">
+            <h2 class="h4 section__title">Книги (розділ)</h2>
+          </div>
+          <div class="col-xl-5">
+            <h2 class="h2 text-light books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3">
+            <figure class="books__el" data-fancybox="books" data-src="#book1">
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+              <figcaption class="books__el-description">
+                <div class="books__el-description-left">
+                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <div class="books__el-price">450.00₴</div>
+                </div>
+                <div class="button button-collapse">
+                  <span class="button__text">Купити</span>
+                  <span class="button__graphic-el"></span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-xl-3">
+            <figure class="books__el" data-fancybox="books" data-src="#book2">
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+              <figcaption class="books__el-description">
+                <div class="books__el-description-left">
+                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <div class="books__el-price">450.00₴</div>
+                </div>
+                <div class="button button-collapse">
+                  <span class="button__text">Купити</span>
+                  <span class="button__graphic-el"></span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-xl-3">
+            <figure class="books__el" data-fancybox="books" data-src="#book3">
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+              <figcaption class="books__el-description">
+                <div class="books__el-description-left">
+                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <div class="books__el-price">450.00₴</div>
+                </div>
+                <div class="button button-collapse">
+                  <span class="button__text">Купити</span>
+                  <span class="button__graphic-el"></span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-xl-3">
+            <figure class="books__el" data-fancybox="books" data-src="#book4">
+              <img src="../img/cover.png" alt="Обкладинка книги" class="books__el-img">
+              <figcaption class="books__el-description">
+                <div class="books__el-description-left">
+                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <div class="books__el-price">450.00₴</div>
+                </div>
+                <div class="button button-collapse">
+                  <span class="button__text">Купити</span>
+                  <span class="button__graphic-el"></span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section events">
+      <div class="container">
+        <ul class="events-list">
+          <li class="events-list__el">
+            <div class="row">
+              <div class="col-xl-8 col-md-6">
+                <div class="events-list__el-main">
+                  <h3 class="text-medium events-list__el-title">Автограф-сесія до книги “Молінія блакитна”</h3>
+                  <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img">
+                </div>
+              </div>
+              <div class="col-xl-2 col-md-3">
+                <time class="events-list__date" datetime="2023-10-30 11:00">
+                  <span>30 жовтня 2023</span>
+                  <span>11:00</span>
+                </time>
+              </div>
+              <div class="col-xl-2 col-md-3">
+                <address class="events-list__address">Київ, вул. Лаврська, 109</address>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section blog">
+      <div class="container">
+        <h2 class="h4 section__title">Блог</h2>
+        <div class="blog__content">
+          <figure class="blog__el">
+            <a href="#">
+              <img src="../img/blog1.jpg" alt="Картинка статті" class="blog__el-img">
+              <figcaption class="blog__el-description">
+                <time class="blog__el-date" datetime="2023-10-30 00:00">30.10.2023</time>
+                <div class="blog__el-text">
+                  <h3 class="h3 blog__el-title">Інтерв’ю із Ольгою Стрікленд про талант та щастя</h3>
+                  <p class="h3 blog__el-short">Відкинь лукавство та брехню, цінуй слова свої та дії. Цінуй людей, що  поруч завше. Цінуй й природу...</p>
+                </div>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="blog__el">
+            <a href="#">
+              <img src="../img/blog1.jpg" alt="Картинка статті" class="blog__el-img">
+              <figcaption class="blog__el-description">
+                <time class="blog__el-date" datetime="2023-10-30 00:00">30.10.2023</time>
+                <div class="blog__el-text">
+                  <h3 class="h3 blog__el-title">Інтерв’ю із Ольгою Стрікленд про талант та щастя</h3>
+                  <p class="h3 blog__el-short">Відкинь лукавство та брехню, цінуй слова свої та дії. Цінуй людей, що  поруч завше. Цінуй й природу...</p>
+                </div>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section socials">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2 class="h4 section__title">У соціальних мережах</h2>
+              </div>
+              <div class="col-sm-6">
+                <div class="socials__header">
+                  <h3 class="h3 socials__title">X</h3>
+                  <a href="#" class="button button-pen">
+                    <span class="button__text">Слідкувати</span>
+                    <span class="button__graphic-el"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6">
+                <a href="#" class="socials-card">
+                  <img src="../img/x.png" alt="Twitter Post">
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="socials-card">
+                  <img src="../img/x.png" alt="Twitter Post">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="socials__header">
+              <h3 class="h3 socials__title">Instagram</h3>
+              <a href="#" class="button button-pen">
+                <span class="button__text">Слідкувати</span>
+                <span class="button__graphic-el"></span>
+              </a>
+            </div>
+            <div class="insta-block">
+              <div class="row">
+                <div class="col-6">
+                  <a href="#"><img src="../img/inst1.jpg" alt="Istagram Фото 1"></a>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <a href="#"><img src="../img/inst2.jpg" alt="Istagram Фото 2"></a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#"><img src="../img/inst3.jpg" alt="Istagram Фото 3"></a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#"><img src="../img/inst4.jpg" alt="Istagram Фото 4"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section collabs">
+      <div class="container">
+        <h2 class="h4 section__title">Співпраця</h2>
+        <ul class="collabs-list">
+          <li class="collabs-list__el">
+            <div class="text-large collabs-list__el-name">Маргарита <b>Січкар</b></div>
+            <div class="text-large collabs-list__el-post">Продюсер</div>
+            <a href="#" class="button button-collapse">
+              <span class="button__text">Instagram</span>
+              <span class="button__graphic-el"></span>
+            </a>
+          </li>
+          <li class="collabs-list__el">
+            <div class="text-large collabs-list__el-name">Анастасія <b>Станкевич</b></div>
+            <div class="text-large collabs-list__el-post">Відеограф</div>
+            <a href="#" class="button button-collapse">
+              <span class="button__text">Instagram</span>
+              <span class="button__graphic-el"></span>
+            </a>
+          </li>
+          <li class="collabs-list__el">
+            <div class="text-large collabs-list__el-name">Олена <b>Дяченко</b></div>
+            <div class="text-large collabs-list__el-post">Ілюстратор</div>
+            <a href="#" class="button button-collapse">
+              <span class="button__text">Instagram</span>
+              <span class="button__graphic-el"></span>
+            </a>
+          </li>
+          <li class="collabs-list__el">
+            <div class="text-large collabs-list__el-name">Анна <b>Шевченко</b></div>
+            <div class="text-large collabs-list__el-post">Фотограф</div>
+            <a href="#" class="button button-collapse">
+              <span class="button__text">Instagram</span>
+              <span class="button__graphic-el"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section prefooter">
+      <div class="prefooter__content">
+        <img src="img/prefooter.jpg" alt="ОЛЬГА СТРІКЛЕНД">
+      </div>
+    </section>
     <a href="#header" class="toTop hidden">
       //= parts/arrow-right-black.html
     </a>
@@ -54,6 +365,23 @@
 
   //= parts/footer.html
   <div id="bio-extended" style="display:none;max-width:500px;">
+    <h2>Hello, world!</h2>
+    <p>
+      <input type="text" value="" />
+    </p>
+    <p>
+      Try hitting the tab key and notice how the focus stays within the dialog
+      itself.
+    </p>
+    <p>
+      To close dialog hit the esc button, click on the overlay or just click the
+      close button.
+    </p>
+    <p>
+      Element used to launch the modal would receive focus back after closing.
+    </p>
+  </div>
+  <div id="book1" style="display:none;max-width:500px;">
     <h2>Hello, world!</h2>
     <p>
       <input type="text" value="" />

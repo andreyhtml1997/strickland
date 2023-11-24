@@ -1,6 +1,11 @@
 section {
 	display: block;
 }
+b, strong {
+	font-style: italic;
+	font-weight: 700;
+	color: $brown;
+}
 .text-large {
 	font-family: 'Nyght Serif';
 	font-size: 58px;
@@ -10,7 +15,19 @@ section {
 	b, strong {
 		font-style: italic;
 		font-weight: 700;
-		color: $gold;
+		color: $brown;
+	}
+}
+.text-medium {
+	font-family: 'Nyght Serif';
+	font-size: 50px;
+	font-weight: 300;
+	line-height: 120%;
+	text-transform: uppercase;
+	b, strong {
+		font-style: italic;
+		font-weight: 700;
+		color: $brown;
 	}
 }
 .section {
