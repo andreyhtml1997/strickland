@@ -6,17 +6,72 @@
     //= parts/header.html
     <section class="section hero">
       <div class="container">
-        <h1>asdadsdadaddadasd</h1>
+        <img src="img/hero-bg-full.jpg" alt="Головна картинка" class="hero__img">
+        <div class="hero__content">
+          <figure class="hero__blockquote-container">
+            <blockquote class="hero__blockquote">
+              Сприймай себе – таким, як є. Не бійся радості та суму. Ти є для себе найцінніше, що мав та маєш, будеш мати. Відвертим буть самим з собою...
+            </blockquote>
+            <figcaption>
+              <img src="../img/sign.png" alt="Підпис автора">
+            </figcaption>
+          </figure>
+          <h1 class="hero__author">
+            <span class="hero__author-post">Письменниця</span>
+            <span class="hero__author-name">Ольга Стрікленд</span>
+          </h1>
+        </div>
+
       </div>
     </section>
+    <section class="section bio">
+      <div class="container">
+        <h2 class="h4 section__title">Біографія</h2>
+        <p class="text-large bio__subtitle">Прихильниця раціонального індивідуалізму. <b>Любов до літератури</b> виникла як наслідок боротьби з суспільством та самою собою.</p>
+        <div class="row">
+          <div class="col-xl-4 offset-xl-3">
+            
+          </div>
+          <div class="col-xl-3 offset-xl-1">
+            <div class="bio__text">
+              <p>Виросла на книгах таких авторів, як А.Ренд, Д.Д.Селінджер, С.Моем, В.Франкл. З дванадцяти років почала писати поезію та короткі оповідання. </p>
+              <p>Проте під впливом публічного натиску не в змозі отримати підтримки вступає в ПКМК та закінчує спеціальність «Фельдшер», пізніше перекваліфікувалась у сомельє.</p>
+            </div>
+            <button data-src="#bio-extended" class="read-more" data-fancybox="bio-extended">Читати більше</button>
+          </div>
+        </div>
 
+      </div>
+    </section>
+    <a href="img/hero-bg-full.jpg" data-fancybox data-caption="Single image">
+      asdadasdasd
+    </a>
     <a href="#header" class="toTop hidden">
       //= parts/arrow-right-black.html
     </a>
   </main>
-  <script src="libs/bodyScrollLock.js"></script>
-  
+  <!-- <script src="libs/bodyScrollLock.js"></script> -->
+
   //= parts/footer.html
-  <script src="./js/front_page.js"></script>
+  <div id="bio-extended" style="display:none;max-width:500px;">
+    <h2>Hello, world!</h2>
+    <p>
+      <input type="text" value="" />
+    </p>
+    <p>
+      Try hitting the tab key and notice how the focus stays within the dialog
+      itself.
+    </p>
+    <p>
+      To close dialog hit the esc button, click on the overlay or just click the
+      close button.
+    </p>
+    <p>
+      Element used to launch the modal would receive focus back after closing.
+    </p>
+  </div>
+  <!-- <script src="libs/fancybox/fancybox.umd.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

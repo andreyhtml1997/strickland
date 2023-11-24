@@ -1,7 +1,9 @@
-AOS.init();
+// AOS.init();
 
 window.onload = function () {
-    
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
   //Preloader
     /* document.querySelector('.preloader').classList.add('hidden');
     // document.querySelector('html').classList.remove('overflow-hidden');

@@ -1,13 +1,24 @@
 section {
 	display: block;
 }
-
+.text-large {
+	font-family: 'Nyght Serif';
+	font-size: 58px;
+	font-weight: 300;
+	line-height: 120%;
+	text-transform: uppercase;
+	b, strong {
+		font-style: italic;
+		font-weight: 700;
+		color: $gold;
+	}
+}
 .section {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
-	padding-top: 90px;
-	padding-bottom: 90px;
+	padding-top: 150px;
+	padding-bottom: 150px;
 	overflow: hidden;
 	position: relative;
 	@media(max-width: $xl){
@@ -49,13 +60,12 @@ section {
 		
 		}
 		
-    .section__title {
-      display: flex;
-      align-items: flex-start;
-			flex-shrink: 0;
-    }
+    
   }
-	&:first-of-type {
+	&__title {
+		
+	}
+/* 	&:first-of-type {
 		padding-top: 160px;
 		@media(max-width: $xl){
 		
@@ -92,5 +102,5 @@ section {
 		
 		}
 		
-	}
+	} */
 }
