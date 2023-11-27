@@ -1,15 +1,134 @@
 .button {
-  
+  display: inline-block;
+  overflow: hidden;
 }
-.button-coppalse {
-
+.button-collapse {
+  border: 1px solid $brown;
+  border-radius: 12px;
+  padding: 0px 2px 0px 0px;
+  display: flex;
+  .button {
+    &__text {
+      display: flex;
+      align-items: center;
+      padding-left: 4px;
+      width: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+    &__graphic-el {
+      position: relative;
+      display: inline-block;
+      min-height: 36px;
+      min-width: 36px;
+      overflow: hidden;
+      &::before, &::after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: '';
+        transition: all .5s;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../../img/svg/arrow-top-right-brown-small.svg);
+      }
+      &::before {
+        transform: translateX(-100%) translateY(100%);
+        transition-delay: 0s;
+      }
+      &::after {
+        transition-delay: 0.2s;
+      }
+    }
+  }
+  &:hover {
+    .button {
+      &__text {
+        padding-left: 16px;
+        width: auto;
+      }
+      &__graphic-el {
+        &::before, &::after {
+        }
+        &::before {
+          transition-delay: 0.2s;
+          transform: translateX(0%);
+        }
+        &::after {
+          transition-delay: 0s;
+          transform: translateX(100%) translatey(-100%);
+        }
+      }
+    }
+  }
 }
 .read-more {
 
 }
 
 .button-pen {
-  
+  display: flex;
+  min-height: 36px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $brown;
+
+  .button {
+    &__text {
+      border: 1px solid $brown;
+      border-radius: 12px;
+      margin-right: -6px;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+      transition: all .5s;
+      padding-top: 2px;
+    }
+    &__graphic-el {
+      border: 1px solid $brown;
+      border-radius: 12px;
+      min-width: 48px;
+      position: relative;
+      transition: all .5s;
+      &::before {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        content: '';
+        background: url(../img/svg/pencil.svg) center no-repeat;
+      }
+    }
+  }
+  &:hover {
+    color: $dark-brown;
+    .button {
+      &__text {
+        border-color: $dark-brown;
+        padding-right: 0;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-right-color: transparent;
+      }
+      &__graphic-el {
+        border-color: $dark-brown;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left-color: transparent;
+        &::before {
+          background-image: url(../../img/svg/pencil-dark-brown.svg);
+        }
+      }
+    }
+  }
 }
 
 .button-container {
