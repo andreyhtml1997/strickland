@@ -3,17 +3,20 @@
   //= parts/head.html
   <body>
     <main>
+    <div class="cursor"></div>
     //= parts/header.html
+    
     <section class="section hero">
       <div class="container">
         <img src="img/hero-bg-full.jpg" alt="Головна картинка" class="hero__img">
         <div class="hero__content">
+          <span></span>
           <figure class="hero__blockquote-container">
             <blockquote class="hero__blockquote">
               Сприймай себе – таким, як є. Не бійся радості та суму. Ти є для себе найцінніше, що мав та маєш, будеш мати. Відвертим буть самим з собою...
             </blockquote>
             <figcaption class="hero__sign">
-              <img src="img/sign.png" alt="Підпис автора">
+              <img src="img/sign.png" alt="Підпис автора" width="120" height="80">
             </figcaption>
           </figure>
           <h1 class="hero__author">
@@ -32,15 +35,15 @@
           <div class="col-xl-4 offset-xl-3">
             <img src="img/bio-small.jpg" alt="Ольга Стрікленд" class="bio__img">
           </div>
-          <figcaption class="col-xl-3 offset-xl-1">
+          <figcaption class="col-xl-4 offset-xl-1">
             <div class="bio__text">
               <p>Виросла на книгах таких авторів, як А.Ренд, Д.Д.Селінджер, С.Моем, В.Франкл. З дванадцяти років почала писати поезію та короткі оповідання. </p>
               <p>Проте під впливом публічного натиску не в змозі отримати підтримки вступає в ПКМК та закінчує спеціальність «Фельдшер», пізніше перекваліфікувалась у сомельє.</p>
             </div>
-            <button data-src="#bio-extended" class="button read-more" data-fancybox="bio-extended">
+            <div data-src="#bio-extended" class="button button-pen" data-fancybox="bio-extended">
               <span class="button__text">Читати більше</span>
               <span class="button__graphic-el"></span>
-            </button>
+            </div>
           </figcaption>
         </figure>
 
@@ -86,9 +89,9 @@
             <h2 class="h4 section__title">Книги</h2>
           </div>
           <div class="col-xl-4">
-            <h2 class="h2 text-light books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
+            <h2 class="h2 text-regular books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
             
-            <figure class="books__el" data-fancybox="books" data-src="#book1">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
@@ -97,7 +100,7 @@
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
               </div>
             </figure>
-            <figure class="books__el" data-fancybox="books" data-src="#book2">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
@@ -108,7 +111,7 @@
             </figure>
           </div>
           <div class="col-xl-4 offset-lg-1">
-            <figure class="books__el" data-fancybox="books" data-src="#book3">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
@@ -117,7 +120,7 @@
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
               </div>
             </figure>
-            <figure class="books__el" data-fancybox="books" data-src="#book4">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
@@ -137,12 +140,12 @@
             <h2 class="h4 section__title">Книги (розділ)</h2>
           </div>
           <div class="col-xl-5">
-            <h2 class="h2 text-light books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
+            <h2 class="h2 text-regular books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
           </div>
         </div>
         <div class="row">
           <div class="col-xl-3">
-            <figure class="books__el" data-fancybox="books" data-src="#book1">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
@@ -153,7 +156,7 @@
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
-                  <span class="button__text">Купити</span>
+                  <span class="button__text"><span class="button__text-inner">Купити</span></span>
                   <span class="button__graphic-el"></span>
                 </div>
               </figcaption>
@@ -161,7 +164,7 @@
             </figure>
           </div>
           <div class="col-xl-3">
-            <figure class="books__el" data-fancybox="books" data-src="#book2">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
@@ -172,7 +175,7 @@
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
-                  <span class="button__text">Купити</span>
+                  <span class="button__text"><span class="button__text-inner">Купити</span></span>
                   <span class="button__graphic-el"></span>
                 </div>
               </figcaption>
@@ -180,7 +183,7 @@
             </figure>
           </div>
           <div class="col-xl-3">
-            <figure class="books__el" data-fancybox="books" data-src="#book3">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
@@ -191,7 +194,7 @@
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
-                  <span class="button__text">Купити</span>
+                  <span class="button__text"><span class="button__text-inner">Купити</span></span>
                   <span class="button__graphic-el"></span>
                 </div>
               </figcaption>
@@ -199,7 +202,7 @@
             </figure>
           </div>
           <div class="col-xl-3">
-            <figure class="books__el" data-fancybox="books" data-src="#book4">
+            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
@@ -210,7 +213,7 @@
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
-                  <span class="button__text">Купити</span>
+                  <span class="button__text"><span class="button__text-inner">Купити</span></span>
                   <span class="button__graphic-el"></span>
                 </div>
               </figcaption>
@@ -387,7 +390,7 @@
             </div>
             <div class="btn-container">
               <a href="#" class="button button-collapse">
-                <span class="button__text">Instagram</span>
+                <span class="button__text"><span class="button__text-inner">Instagram</span></span>
                 <span class="button__graphic-el"></span>
               </a>
             </div>
@@ -399,7 +402,7 @@
             </div>
             <div class="btn-container">
               <a href="#" class="button button-collapse">
-                <span class="button__text">Instagram</span>
+                <span class="button__text"><span class="button__text-inner">Instagram</span></span>
                 <span class="button__graphic-el"></span>
               </a>
             </div>
@@ -411,7 +414,7 @@
             </div>
             <div class="btn-container">
               <a href="#" class="button button-collapse">
-                <span class="button__text">Instagram</span>
+                <span class="button__text"><span class="button__text-inner">Instagram</span></span>
                 <span class="button__graphic-el"></span>
               </a>
             </div>
@@ -423,7 +426,7 @@
             </div>
             <div class="btn-container">
               <a href="#" class="button button-collapse">
-                <span class="button__text">Instagram</span>
+                <span class="button__text"><span class="button__text-inner">Instagram</span></span>
                 <span class="button__graphic-el"></span>
               </a>
             </div>
@@ -438,45 +441,133 @@
     </section>
     
   </main>
-  <!-- <script src="libs/bodyScrollLock.js"></script> -->
+  
 
   //= parts/footer.html
-  <div id="bio-extended" style="display:none;max-width:500px;">
-    <h2>Hello, world!</h2>
-    <p>
-      <input type="text" value="" />
-    </p>
-    <p>
-      Try hitting the tab key and notice how the focus stays within the dialog
-      itself.
-    </p>
-    <p>
-      To close dialog hit the esc button, click on the overlay or just click the
-      close button.
-    </p>
-    <p>
-      Element used to launch the modal would receive focus back after closing.
-    </p>
+  <div id="bio-extended" class="fancybox-container" style="display:none;">
+    <section class="section bio-extended">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="position-sticky">
+              <div class="swiper bio-carousel">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/bio-1.jpg" alt="Фото 1">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/bio-1.jpg" alt="Фото 2">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/bio-1.jpg" alt="Фото 3">
+                  </div>
+                </div>
+                <div class="swiper-nav">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bio-extended__content">
+              <div class="fancybox-close" data-fancybox-close></div>
+              <h2 class="h4 section__title">Біографія</h2>
+              <h3 class="h2 text-regular">Ольга Стрікленд (Кравченко) 23.07.1997 – прихильниця <b>раціонального індивідуалізму.</b> </h3>
+              <div class="bio-extended__text">
+                <p>Виросла на книгах таких авторів, як А.Ренд, Д.Д.Селінджер, С.Моем, В.Франкл. Любов до літератури виникла як наслідок боротьби з суспільством та самою собою. Тому з дванадцяти років почала писати поезію та короткі оповідання. Проте під впливом публічного натиску не в змозі отримати підтримки вступає в ПКМК та закінчує спеціальність «Фельдшер», пізніше перекваліфікувалась у сомельє.</p>
+
+                <p>Вищу освіту отримала в НУХТ за спеціальністю «Технолог-інженер продуктів бродіння та виноробства». Після цього продовжує навчання та знову міняє спеціальність. Оволодіває професією тренера тренажерного залу та нутріціолога.</p>
+
+                <p>Паралельно з навчанням одружується та народжує двох дітей.</p>
+
+                <p>На початку повномасштабного вторгнення виїздить до Німеччини, де починає знову писати. Там зароджується її перший роман. Не в силах витримати розлуки з домівкою через шість місяців повертається в Україну та завершує рукопис.</p>
+
+
+                <p>Особливий вплив на творчість мають постійні подорожі та жага до пізнання нового.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-  <div id="book1" style="display:none;max-width:500px;">
-    <h2>Hello, world!</h2>
-    <p>
-      <input type="text" value="" />
-    </p>
-    <p>
-      Try hitting the tab key and notice how the focus stays within the dialog
-      itself.
-    </p>
-    <p>
-      To close dialog hit the esc button, click on the overlay or just click the
-      close button.
-    </p>
-    <p>
-      Element used to launch the modal would receive focus back after closing.
-    </p>
+  <div id="book-extended" class="fancybox-container" style="display:none;">
+    <section class="section bio-extended book">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="position-sticky">
+              <img src="img/cover.png" alt="Обкладинка книги" class="book__poster">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bio-extended__content book__content">
+              <div class="fancybox-close" data-fancybox-close></div>
+              <h2 class="text-medium book__title">Молінія блакитна</h2>
+              <ul class="book__features">
+                <li class="book__feature">
+                  <div class="book__feature-title">Мова</div>
+                  <div class="book__feature-value">Українська, англійська</div>
+                </li>
+                <li class="book__feature">
+                  <div class="book__feature-title">Рік видання</div>
+                  <div class="book__feature-value">2023</div>
+                </li>
+                <li class="book__feature">
+                  <div class="book__feature-title">Видавництво</div>
+                  <div class="book__feature-value">Назва видавництва</div>
+                </li>
+              </ul>
+              <form action="#">
+                <fieldset>
+                  <div class="choose-type">
+                    <legend class="choose-type__title">Обери формат книги:</legend>
+                    <label class="choose-type__el">
+                      <input type="radio" name="choose-type" checked>
+                      <span class="choose-type__el-value">Паперова</span>
+                    </label>
+                    <label class="choose-type__el">
+                      <input type="radio" name="choose-type">
+                      <span class="choose-type__el-value">Аудіо</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <div class="text-medium price-value">
+                  <input type="text" readonly value="450.00" class="d-none">
+                  450.00₴
+                </div>
+                <div class="buttons">
+                  <button type="button" class="buy-button">
+                    <span>Купити</span>
+                  </button>
+                  <a href="#" class="read-more">Читати уривок</a>
+                </div>
+              </form>
+              <div class="book-info">
+                <h3 class="h3 book-info__title">Про книгу</h3>
+                <div class="book-info__content">
+                  <p>Самуель Олдрідж, юнак, не погоджуючись з соціальним устроєм, кидає все та у віці п’ятнадцяти років переїздить з Лондона у невелике місто Лервік, що на Шетландських островах. Його життя впродовж декількох років являє собою далеку бухту спокою та умиротворення. Проте клешні суспільного устрою повертають його до себе. Після цього перед юнаком постає питання: «Чого дійсно він бажає для себе у сім житті?»</p>
+                </div>
+              </div>
+              <div class="book-info">
+                <h3 class="h3 book-info__title">Відео</h3>
+                <div class="book-info__content">
+                  <iframe width="1903" height="794" src="https://www.youtube.com/embed/KJwYBJMSbPI" title="EARTH 4K - Relaxation Film - Peaceful Relaxing Music - Nature 4k Video UltraHD -  OUR PLANET" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <iframe width="1903" height="794" src="https://www.youtube.com/embed/KJwYBJMSbPI" title="EARTH 4K - Relaxation Film - Peaceful Relaxing Music - Nature 4k Video UltraHD -  OUR PLANET" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+  <!-- <script src="libs/bodyScrollLock.js"></script> -->
   <!-- <script src="libs/fancybox/fancybox.umd.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="libs/fancybox/fancybox.umd.js"></script>
+  <script src="libs/sticky/sticky.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -35,7 +35,9 @@ body {
 		padding: 0 15px;
 	}
 }
-
+.position-absolute {
+	position: absolute !important;
+}
 main {
 	position: relative;
 }

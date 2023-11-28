@@ -3,20 +3,50 @@
 
 
 .hero {
+  background: url(../img/hero-bg-full.jpg) center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 40px;
+  color: $white;
+  align-items: initial;
   .container {
 
   }
   &__img {
-
+    display: none;
   }
   &__content {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
   }
   &__blockquote-container {
-
+    max-width: 310px;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+    &::before {
+      top: 0;
+      right: calc(100% + 15px);
+      margin: auto;
+      position: absolute;
+      content: '“';
+      font-family: 'Nyght Serif';
+      font-size: 174px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 80%; /* 139.2px */
+      letter-spacing: -3.48px;
+      text-transform: uppercase;
+      color: $dark-brown;
+      
+    }
   }
   &__blockquote {
-
+    margin-bottom: 12px;
+    
   }
   &__sign {
     img {
@@ -24,13 +54,52 @@
     }
   }
   &__author {
-
+    color: $white;
+    display: flex;
+    align-items: flex-end;
   }
   &__author-post {
-
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1.6px;
+    line-height: 2.3;
+    margin-right: 50px;
+    @media(max-width: $xl){
+      font-size: 2.3vw;
+      margin-right: 3.6vw;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__author-name {
-
+    @media(max-width: $xl){
+      font-size: 12.5vw;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
 }
 
@@ -40,10 +109,14 @@
 
   }
   .section__title {
-
+    color: $brown;
+    margin-bottom: 0;
+    width: 25%;
+    margin-bottom: -27px;
   }
   &__subtitle {
-
+    text-indent: 25%;
+    margin-bottom: 50px;
   }
   .row {
     & > * {
@@ -54,8 +127,13 @@
 
   }
   &__text {
+    margin-bottom: 60px;
     p {
-
+      font-size: 16px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   .read-more {
@@ -65,6 +143,7 @@
 
 
 .press {
+  min-height: auto;
   background-color: $brown;
   .container {
 
@@ -74,22 +153,50 @@
   }
   &__row {
     display: flex;
-    &:nth-child(odd) {
+    &:nth-of-type(odd) {
       
     }
-    &:nth-child(even) {
-      
+    &:nth-of-type(even) {
+      justify-content: flex-end;
+      .press__el {
+        &:before {
+          right: auto;
+          left: calc(100% + 85px);
+        }
+      }
     }
   }
   &__el {
     display: flex;
     height: 110px;
+    margin-right: 220px;
+    position: relative;
+    &::before {
+      width: 50px;
+      height: 20px;
+      top: 0;
+      bottom: 0;
+      right: calc(100% + 85px);
+      margin: auto;
+      position: absolute;
+      content: '';
+      background: url(../img/svg/sigh_down.svg) center no-repeat;
+      background-size: contain;
+
+    }
+    &:nth-of-type(odd) {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
     &:hover {
       .press {
 
 
         &__el-logo {
-          background-color: $dark-brown;
+          &::before {
+            width: 100%;
+          }
           
         }
         &__el-arrow {
@@ -113,12 +220,25 @@
     transition: all 0.5s;
     display: flex;
     padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      background-color: $dark-brown;
+      transition: all 0.5s;
+      position: absolute;
+    }
     &--pravda {
       padding: 0 15px;
     }
     img {
       width: auto;
       max-width: none;
+      position: relative;
     }
   }
   &__el-arrow {
@@ -138,7 +258,7 @@
       background-repeat: no-repeat;
       background-position: center;
       transition: all 0.5s;
-      background-image: url(../../img/svg/arrow-top-right-light.svg);
+      background-image: url(../img/svg/arrow-top-right-light.svg);
     }
     &::before {
       transform: translateX(-100%) translateY(100%);
@@ -163,7 +283,7 @@
     color: $brown;
   }
   &__text {
-    margin-bottom: 100px;
+    
   }
   &__el {
     cursor: pointer;
@@ -221,6 +341,10 @@
         &:last-of-type {
           margin-bottom: 0;
         }
+        
+      }
+      &__text {
+        margin-bottom: 100px;
       }
     }
   }
@@ -240,7 +364,18 @@
 
       }
       &__el {
-
+        position: relative;
+        .button-collapse {
+          overflow: visible;
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: '';
+          }
+        }
       }
       &__el-img {
     
@@ -263,9 +398,7 @@
       &__el-price {
     
       }
-      .button-collapse {
-
-      }
+      
       
     }
   }
@@ -345,12 +478,22 @@
     font-style: normal;
     transition: all 0.5s;
   }
+  &.active {
+    .events-list {
+      &__el {
+        opacity: 0.2;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 
 
 .blog {
-  background: url(../../img/blog-bg.jpg) center no-repeat;
+  background: url(../img/blog-bg.jpg) center no-repeat;
   background-attachment: fixed;
   &::before {
     content: '';
@@ -359,7 +502,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(../../img/blog-mask.svg) center no-repeat;
+    background: url(../img/blog-mask.svg) center no-repeat;
     background-size: cover;
   }
   .container {
@@ -404,19 +547,20 @@
 
   }
   &__el-title {
-    color: $light;
+    color: $white;
     margin-bottom: 8px;
   }
   &__el-short {
     font-size: 16px;
     font-family: 'Fixel';
     max-width: 420px;
+    color: $white;
   }
 }
 
 
 .socials {
-  
+  min-height: auto;
   .container {
     & > .row {
       justify-content: space-between;
@@ -500,6 +644,7 @@
 
 
 .collabs {
+  min-height: auto;
   .container {
 
   }

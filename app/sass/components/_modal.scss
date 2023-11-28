@@ -1,0 +1,251 @@
+
+
+.fancybox-container {
+  width: 100%;
+}
+.fancybox__content {
+  padding: 0;
+  .fancybox-close {
+    border: 1px solid $brown;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4px 12px;
+    width: 42px;
+    height: 36px;
+    position: sticky;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 24px;
+    background-color: $light;
+    top: 15px;
+    &::before,  &::after  {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.5s;
+      background-image: url(../img/svg/times-brown.svg);
+    }
+    &::before {
+      transform: translateX(-100%) translateY(0%);
+      transition-delay: 0s;
+    }
+    &::after {
+      transition-delay: 0.2s;
+    }
+    &:hover {
+      transition: all 0.5s;
+      &::before {
+        transition-delay: 0.2s;
+        transform: translateX(0%);
+      }
+      &::after {
+        transition-delay: 0s;
+        transform: translateX(100%) translatey(0%);
+      }
+    }
+  }
+  .f-button {
+    display: none;
+  }
+}
+
+.fancybox__slide {
+  overflow: hidden;
+}
+
+
+.bio-extended {
+  background: $light;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  .position-sticky {
+    top: 0;
+    position: sticky;
+  }
+  .container-fluid {
+    padding: 0;
+  }
+  .section__title {
+    color: $brown;
+    max-width: 560px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .text-regular {
+    margin-bottom: 60px;
+  }
+  &__content {
+    padding: 30px;
+    max-width: 690px;
+  }
+  &__text {
+    
+    max-width: 560px;
+    margin-right: 0;
+    margin-left: auto;
+    p {
+
+    }
+  }
+  .row {
+    overflow: auto;
+    max-height: 100vh;
+  }
+}
+.sticky {
+  height: 100% !important;
+}
+.bio-carousel {
+  height: 100vh;
+  position: sticky;
+  
+  .swiper-wrapper {
+
+  }
+  .swiper-slide {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  .swiper-nav {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
+      position: relative;
+      right: 0;
+      left: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background-color: $brown;
+      height: 36px;
+      width: 42px;
+      margin: 0 12px;
+      &::before,  &::after  {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        content: '';
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s;
+        background-image: url(../img/svg/arrow-right-light-24.svg);
+        
+      }
+      &::before {
+        transform: translateX(-100%) translateY(0%);
+        transition-delay: 0s;
+      }
+      &::after {
+        transition-delay: 0.2s;
+      }
+
+      &:hover {
+        transition: all 0.5s;
+        &::before {
+          transition-delay: 0.2s;
+          transform: translateX(0%);
+        }
+        &::after {
+          transition-delay: 0s;
+          transform: translateX(100%) translatey(0%);
+        }
+      }
+    }
+  }
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+  .swiper-button-next {
+    
+  }
+}
+
+
+
+.book {
+  .container-fluid {
+
+  }
+  .row {
+    & > * {
+
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__poster {
+
+  }
+  &__content {
+
+  }
+  &__features {
+    border-bottom: 1px solid $light-brown;
+    margin-bottom: 24px;
+  }
+  &__feature {
+    display: flex;
+
+    border-top: 1px solid $light-brown;
+    padding: 6px 0;
+  }
+  &__feature-title {
+    width: 40%;
+    color: $brown;
+  }
+  &__feature-value {
+    width: 60%;
+  }
+  &-info {
+    margin-top: 60px;
+    &__title {
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      & > * {
+        margin-top: 24px;
+      }
+      p {
+
+      }
+      video, iframe {
+        width: 100% !important;
+        height: 330px !important;
+      }
+    }
+  }
+  .position-sticky {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-height: 100vh;
+    }
+  }
+}
