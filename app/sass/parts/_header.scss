@@ -5,12 +5,31 @@
   right: 0;
   z-index: 2;
   padding: 40px 0;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    padding: 25px 0;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__logo {
+    display: flex;
+    position: relative;
+    z-index: 1;
     img {
 
     }
@@ -20,19 +39,128 @@
     align-items: center;
     width: 100%;
     padding: 0px 8%;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      flex-direction: column;
+      background-color: $dark-brown;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 143px 0px 60px;
+      overflow: auto;
+      transform: translateX(100%);
+      transition: all 0.5s;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__menu-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      flex-direction: column;
+      font-family: $secondaryFont;
+      font-weight: 300;
+      font-size: 38px;
+      width: 100%;
+      counter-reset: i;
+      border-top: 1px solid $brown;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__menu-list-el {
     margin-right: 24px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      margin-right: 0;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__menu-list-link {
     color: $white;
     position: relative;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      display: flex;
+      line-height: 1;
+      padding: 45px 12px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $brown;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &::before {
+      font-size: 14px;
+      color: $brown;
+      width: 44px;
+      position: relative;
+      top: 6px;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        counter-increment: i;
+        content: '(0' counter(i) ')';
+      }
+      @media(max-width: $xs){
+      
+      }
+      
+      
+    }
+    &::after {
       background: #fff;
       bottom: 0;
       content: "";
@@ -49,7 +177,7 @@
       will-change: transform;
     }
     &:hover {
-      &::before {
+      &::after {
         transform: scaleX(1);
         transform-origin: 0 0;
       }
@@ -60,13 +188,15 @@
 
 
   &__right {
-
+    display: flex;
   }
   &__toggle {
     display: none;
     width: 31px;
     height: 31px;
     position: relative;
+    margin-left: 55px;
+    z-index: 1;
     @media(max-width: $xl){
     
     }
@@ -74,9 +204,9 @@
     
     }
     @media(max-width: $md){
-      display: flex;
     }
     @media(max-width: $sm){
+      display: flex;
     
     }
     @media(max-width: $xs){
@@ -104,8 +234,48 @@
   .socials-list {
     margin-right: 0;
     margin-left: 0;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      margin-top: 60px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    &__el {
+      &:first-of-type {
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+          margin-left: 0;
+          
+        
+        }
+        @media(max-width: $xs){
+        
+        }
+        
+      }
+    }
     &__link {
-      border-color: $white;
+      border-color: transparent;
+      border-radius: 0;
+      
       &--inst {
         &::before, &::after {
           background-image: url(../img/svg/inst-white.svg);
@@ -118,24 +288,137 @@
       }
     }
   }
+  &.active {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      &::before {
+        z-index: 1;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-color: $dark-brown;
+        position: absolute;
+      }
+      .header {
+        &__toggle {
+          border: 1px solid $light;
+          border-radius: 12px;
+          padding: 6px 9px;
+          height: 36px;
+          width: 42px;
+          top: -4px;
+          &::before, &::after {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 18px;
+          }
+          &::before {
+            transform: rotate(45deg);
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+        &__menu {
+          transform: translateX(0%);
+        }
+      }
+
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+    
+  }
 }
 
 .language-list {
+  z-index: 1;
   font-size: 14px;
   text-transform: uppercase;
   display: flex;
+  border-radius: 10px;
+  // border: 1px solid $white;
+  width: 44px;
+  overflow: hidden;
+  position: relative;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    font-size: 12px;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  .ellipseEl {
+    height: 28px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    svg {
+      rect {
+
+      }
+    }
+  }
   &__el {
-    margin-left: 2px;
-    margin-right: 2px;
+    width: 44px;
+    height: 28px;
+    display: flex;
+    flex-shrink: 0;
+    transition: all .5s;
+    &.active {
+      
+    }
+    &:nth-of-type(1) {
+      transform: translateX(-100%);
+      transition-delay: 0s;
+    }
+    &:nth-of-type(2) {
+      transform: translateX(-100%);
+      transition-delay: 0.2s;
+    }
   }
   &__link {
     color: $white;
-    border: 1px solid transparent;
-    border-radius: 10px;
     display: flex;
-    padding: 4px 12px;
-    &.active {
-      border-color: $white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &:hover {
+    .language-list__el {
+      &:nth-of-type(1) {
+        transition-delay: 0.2s;
+        transform: translateX(0%);
+      }
+      &:nth-of-type(2) {
+        transition-delay: 0s;
+        transform: translateX(100%);
+      }
     }
   }
 }
@@ -171,6 +454,22 @@
   transition: all 0.2s linear, top 0ms linear, left 0ms ease-in-out;
   mix-blend-mode: normal;
   background-size: contain;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    display: none;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
 }
 
 

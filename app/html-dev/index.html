@@ -2,7 +2,7 @@
 <html lang="en">
   //= parts/head.html
   <body>
-    <main>
+    <main class="main">
     <div class="cursor"></div>
     //= parts/header.html
     
@@ -32,10 +32,10 @@
         <h2 class="h4 section__title">Біографія</h2>
         <p class="text-large bio__subtitle">Прихильниця раціонального індивідуалізму. <b>Любов до літератури</b> виникла як наслідок боротьби з суспільством та самою собою.</p>
         <figure class="row">
-          <div class="col-xl-4 offset-xl-3">
+          <div class="col-xl-4 offset-xl-3 col-lg-5 offset-lg-1 col-sm-6 order-sm-0 order-1">
             <img src="img/bio-small.jpg" alt="Ольга Стрікленд" class="bio__img">
           </div>
-          <figcaption class="col-xl-4 offset-xl-1">
+          <figcaption class="col-xl-4 offset-xl-1 col-lg-5 offset-lg-1  col-sm-6 order-sm-1 order-0">
             <div class="bio__text">
               <p>Виросла на книгах таких авторів, як А.Ренд, Д.Д.Селінджер, С.Моем, В.Франкл. З дванадцяти років почала писати поезію та короткі оповідання. </p>
               <p>Проте під впливом публічного натиску не в змозі отримати підтримки вступає в ПКМК та закінчує спеціальність «Фельдшер», пізніше перекваліфікувалась у сомельє.</p>
@@ -85,13 +85,13 @@
     <section class="section books books--main">
       <div class="container">
         <div class="row">
-          <div class="col-xl-3">
+          <div class="col-xl-3 col-lg-3 col-md-2">
             <h2 class="h4 section__title">Книги</h2>
           </div>
-          <div class="col-xl-4">
+          <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
             <h2 class="h2 text-regular books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
             
-            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
+            <figure class="books__el cursor-special" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
@@ -99,19 +99,31 @@
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
               </div>
+              <div class="d-flex justify-content-center">
+                <div class="button button-collapse">
+                  <span class="button__text"><span class="button__text-inner">ДЕТАЛЬНІШЕ</span></span>
+                  <span class="button__graphic-el"></span>
+                </div>
+              </div>
             </figure>
-            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
+            <figure class="books__el cursor-special" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
               </figcaption>
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="button button-collapse">
+                  <span class="button__text"><span class="button__text-inner">ДЕТАЛЬНІШЕ</span></span>
+                  <span class="button__graphic-el"></span>
+                </div>
               </div>
             </figure>
           </div>
-          <div class="col-xl-4 offset-lg-1">
-            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
+          <div class="col-xl-4 offset-lg-1 col-lg-4 col-md-5 col-sm-6">
+            <figure class="books__el cursor-special" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
@@ -119,14 +131,26 @@
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
               </div>
+              <div class="d-flex justify-content-center">
+                <div class="button button-collapse">
+                  <span class="button__text"><span class="button__text-inner">ДЕТАЛЬНІШЕ</span></span>
+                  <span class="button__graphic-el"></span>
+                </div>
+              </div>
             </figure>
-            <figure class="books__el" data-fancybox="books" data-src="#book-extended">
+            <figure class="books__el cursor-special" data-fancybox="books" data-src="#book-extended">
               <figcaption class="books__el-description">
                 <h3 class="h3 books__el-title">Молінія блакитна</h3>
                 <div class="books__el-price">450.00₴</div>
               </figcaption>
               <div class="books__el-img-container">
                 <img src="img/cover.png" alt="Обкладинка книги" class="books__el-img">
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="button button-collapse">
+                  <span class="button__text"><span class="button__text-inner">ДЕТАЛЬНІШЕ</span></span>
+                  <span class="button__graphic-el"></span>
+                </div>
               </div>
             </figure>
           </div>
@@ -143,8 +167,8 @@
             <h2 class="h2 text-regular books__text">Серія соціальних романів: <b>«В пошуках щастя»</b></h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xl-3">
+        <div class="row books-row">
+          <div class="col-xl-3 col-6">
             <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
@@ -152,7 +176,7 @@
               </div>
               <figcaption class="books__el-description">
                 <div class="books__el-description-left">
-                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <h3 class="books__el-title">Молінія блакитна</h3>
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
@@ -163,7 +187,7 @@
               </a>
             </figure>
           </div>
-          <div class="col-xl-3">
+          <div class="col-xl-3 col-6">
             <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
@@ -171,7 +195,7 @@
               </div>
               <figcaption class="books__el-description">
                 <div class="books__el-description-left">
-                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <h3 class="books__el-title">Молінія блакитна</h3>
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
@@ -182,7 +206,7 @@
               </a>
             </figure>
           </div>
-          <div class="col-xl-3">
+          <div class="col-xl-3 col-6">
             <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
@@ -190,7 +214,7 @@
               </div>
               <figcaption class="books__el-description">
                 <div class="books__el-description-left">
-                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <h3 class="books__el-title">Молінія блакитна</h3>
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
@@ -201,7 +225,7 @@
               </a>
             </figure>
           </div>
-          <div class="col-xl-3">
+          <div class="col-xl-3 col-6">
             <figure class="books__el" data-fancybox="books" data-src="#book-extended">
               <a href="#">
               <div class="books__el-img-container">
@@ -209,7 +233,7 @@
               </div>
               <figcaption class="books__el-description">
                 <div class="books__el-description-left">
-                  <h3 class="h3 books__el-title">Молінія блакитна</h3>
+                  <h3 class="books__el-title">Молінія блакитна</h3>
                   <div class="books__el-price">450.00₴</div>
                 </div>
                 <div class="button button-collapse">
@@ -229,57 +253,66 @@
         <ul class="events-list">
           <li class="events-list__el">
             <div class="row">
-              <div class="col-xl-7 col-md-6">
+              <div class="col-xl-7 col-lg-7 offset-xl-0 offset-lg-1">
                 <div class="events-list__el-main">
                   <h3 class="text-medium events-list__el-title">Підписання книги</h3>
-                  <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img">
+                  <div class="events-list__el-hover">
+                    <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img" width="274" height="340">
+                    <div class="text-medium events-list__el-title">Підписання книги</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-md-3">
+              <div class="col-xl-3 col-lg-2">
                 <time class="events-list__date" datetime="2023-10-30 11:00">
                   <span>30 жовтня 2023</span>
                   <span>11:00</span>
                 </time>
               </div>
-              <div class="col-xl-2 col-md-3">
+              <div class="col-xl-2 col-lg-2">
                 <address class="events-list__address">Київ, вул. Лаврська, 109</address>
               </div>
             </div>
           </li>
           <li class="events-list__el">
             <div class="row">
-              <div class="col-xl-7 col-md-6">
+              <div class="col-xl-7 col-lg-7 offset-xl-0 offset-lg-1">
                 <div class="events-list__el-main">
                   <h3 class="text-medium events-list__el-title">Авторське Читання</h3>
-                  <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img">
+                  <div class="events-list__el-hover">
+                    <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img" width="274" height="340">
+                    <div class="text-medium events-list__el-title">Авторське Читання</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-md-3">
+              <div class="col-xl-3 col-lg-2">
                 <time class="events-list__date" datetime="2023-10-30 11:00">
                   <span>30 жовтня 2023</span>
                   <span>11:00</span>
                 </time>
               </div>
-              <div class="col-xl-2 col-md-3">
+              <div class="col-xl-2 col-lg-2">
                 <address class="events-list__address">Київ, вул. Лаврська, 109</address>
               </div>
             </div>
           </li>
           <li class="events-list__el">
             <div class="row">
-              <div class="col-xl-7 col-md-6">
+              <div class="col-xl-7 col-lg-7 offset-xl-0 offset-lg-1">
                 <div class="events-list__el-main">
                   <h3 class="text-medium events-list__el-title">Автограф-сесія до книги “Молінія блакитна”</h3>
-                  <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img">
+                  <div class="events-list__el-hover">
+                    <img src="img/event.jpg" alt="Event Фото" class="events-list__el-img" width="274" height="340">
+                    <div class="text-medium events-list__el-title">Автограф-сесія до книги “Молінія блакитна”</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-md-3">
+              <div class="col-xl-3 col-lg-2">
                 <time class="events-list__date" datetime="2023-10-30 11:00">
                   <span>30 жовтня 2023</span>
                   <span>11:00</span>
                 </time>
               </div>
-              <div class="col-xl-2 col-md-3">
+              <div class="col-xl-2 col-lg-2">
                 <address class="events-list__address">Київ, вул. Лаврська, 109</address>
               </div>
             </div>
@@ -292,13 +325,13 @@
         <h2 class="h4 section__title">Блог</h2>
         <div class="blog__content">
           <figure class="blog__el">
-            <a href="#">
+            <a href="#" class="cursor-special">
               <img src="img/blog1.jpg" alt="Картинка статті" class="blog__el-img">
               <figcaption class="blog__el-description">
                 <time class="blog__el-date" datetime="2023-10-30 00:00">30.10.2023</time>
                 <div class="blog__el-text">
                   <h3 class="h3 blog__el-title">Інтерв’ю із Ольгою Стрікленд про талант та щастя</h3>
-                  <p class="h3 blog__el-short">Відкинь лукавство та брехню, цінуй слова свої та дії. Цінуй людей, що  поруч завше. Цінуй й природу...</p>
+                  <p class="blog__el-short">Відкинь лукавство та брехню, цінуй слова свої та дії. Цінуй людей, що  поруч завше. Цінуй й природу...</p>
                 </div>
               </figcaption>
             </a>
@@ -323,10 +356,10 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-lg-6">
                 <h2 class="h4 section__title">У соціальних мережах</h2>
               </div>
-              <div class="col-sm-6">
+              <div class="col-lg-6">
                 <div class="socials__header">
                   <h3 class="h3 socials__title">X</h3>
                   <a href="#" class="button button-pen">
@@ -496,12 +529,12 @@
     <section class="section bio-extended book">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="position-sticky">
               <img src="img/cover.png" alt="Обкладинка книги" class="book__poster">
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="bio-extended__content book__content">
               <div class="fancybox-close" data-fancybox-close></div>
               <h2 class="text-medium book__title">Молінія блакитна</h2>
@@ -523,14 +556,16 @@
                 <fieldset>
                   <div class="choose-type">
                     <legend class="choose-type__title">Обери формат книги:</legend>
-                    <label class="choose-type__el">
-                      <input type="radio" name="choose-type" checked>
-                      <span class="choose-type__el-value">Паперова</span>
-                    </label>
-                    <label class="choose-type__el">
-                      <input type="radio" name="choose-type">
-                      <span class="choose-type__el-value">Аудіо</span>
-                    </label>
+                    <div class="choose-type__body">
+                      <label class="choose-type__el">
+                        <input type="radio" name="choose-type" checked>
+                        <span class="choose-type__el-value">Паперова</span>
+                      </label>
+                      <label class="choose-type__el">
+                        <input type="radio" name="choose-type">
+                        <span class="choose-type__el-value">Аудіо</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="text-medium price-value">

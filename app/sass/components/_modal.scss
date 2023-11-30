@@ -22,6 +22,24 @@
     margin-bottom: 24px;
     background-color: $light;
     top: 15px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      position: fixed;
+      right: 15px;
+      top: 30px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &::before,  &::after  {
       top: 0;
       bottom: 0;
@@ -32,7 +50,7 @@
       content: '';
       background-repeat: no-repeat;
       background-position: center;
-      transition: all 0.5s;
+      transition: all $delay;
       background-image: url(../img/svg/times-brown.svg);
     }
     &::before {
@@ -43,7 +61,7 @@
       transition-delay: 0.2s;
     }
     &:hover {
-      transition: all 0.5s;
+      transition: all $delay;
       &::before {
         transition-delay: 0.2s;
         transform: translateX(0%);
@@ -88,6 +106,23 @@
   &__content {
     padding: 30px;
     max-width: 690px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__text {
     
@@ -109,7 +144,7 @@
 .bio-carousel {
   height: 100vh;
   position: sticky;
-  
+  cursor: grab;
   .swiper-wrapper {
 
   }
@@ -150,7 +185,7 @@
         content: '';
         background-repeat: no-repeat;
         background-position: center;
-        transition: all 0.5s;
+        transition: all $delay;
         background-image: url(../img/svg/arrow-right-light-24.svg);
         
       }
@@ -163,7 +198,7 @@
       }
 
       &:hover {
-        transition: all 0.5s;
+        transition: all $delay;
         &::before {
           transition-delay: 0.2s;
           transform: translateX(0%);
@@ -186,6 +221,22 @@
 
 
 .book {
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   .container-fluid {
 
   }
@@ -196,12 +247,43 @@
   }
   &__title {
     margin-bottom: 40px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-bottom: 24px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__poster {
 
   }
   &__content {
-
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      padding-top: 48px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__features {
     border-bottom: 1px solid $light-brown;
@@ -222,6 +304,22 @@
   }
   &-info {
     margin-top: 60px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-top: 28px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &__title {
     }
     &__content {
@@ -229,6 +327,22 @@
       flex-direction: column;
       & > * {
         margin-top: 24px;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          margin-top: 16px;
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+        
+        }
+        
       }
       p {
 
@@ -244,8 +358,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      height: auto;
+      padding-top: 80px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     img {
       max-height: 100vh;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        max-width: 360px;
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
   }
 }

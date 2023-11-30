@@ -1,10 +1,29 @@
 .inline-form {
   max-width: 420px;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  }
+  @media(max-width: $xs){
+    max-width: calc(100% - 60px);
+  
+  }
+  
   &__title {
     font-size: 18px;
     font-weight: 500;
     color: $brown;
     margin-bottom: 24px;
+    @media(max-width: $md){
+      font-size: 16px;
+    }
   }
   form {
     display: flex;
@@ -33,23 +52,58 @@
       line-height: 0.8;
       padding-top: 3px;
       position: absolute;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        left: 11px;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
     input:not([type="password"]) {
       text-transform: uppercase;
     }
     input {
+      transition: all 0.5s;
       border: 1px solid $dark-brown;
       padding: 15px 16px;
       font-size: 14px;
       font-weight: 500;
       color: $light;
       border-radius: 12px;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        font-size: 12px;
+        padding: 13px 12px;
+      }
+      @media(max-width: $xs){
+      
+      }
+      
       &::placeholder {
         color: $dark-brown;
         text-transform: uppercase;
       }
       &:hover {
         border-color: $brown;
+        border-right-color: transparent;
         &::placeholder {
           color: $brown;
         }
@@ -66,6 +120,7 @@
     }
   }
   *[type="submit"] {
+    transition: all 0.5s;
     display: block;
     width: 64px;
     position: relative;
@@ -92,19 +147,30 @@
       background: url(../img/svg/pencil.svg) center no-repeat;
     }
   }
-  &:hover {
+  &:hover, &.active {
     input {
       border-color: $brown;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right-color: transparent;
       &::placeholder {
         color: $brown;
       }
     }
     *[type="submit"] {
       border-color: $brown;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-color: transparent !important;
     }
   }
 }
-
+.is-horizontal .f-carousel__nav .f-button.is-prev, .is-horizontal .fancybox__nav .f-button.is-prev {
+  left: 2px;
+}
+.is-horizontal .f-carousel__nav .f-button.is-next, .is-horizontal .fancybox__nav .f-button.is-next {
+  right: 2px;
+}
 form {
 
 .choose-type {
@@ -112,11 +178,31 @@ form {
   display: flex;
   align-items: center;
   margin-bottom: 45px;
+  flex-wrap: wrap;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    margin-bottom: 28px;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   &__title {
     margin-right: 55px;
   }
   &__el-value {
 
+  }
+  &__body {
+    display: flex;
   }
   &__el {
     cursor: pointer;
@@ -172,6 +258,22 @@ form {
 .price-value {
   display: flex;
   margin-bottom: 45px;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    margin-bottom: 28px;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   input {
     width: auto;
     min-width: auto;
@@ -184,19 +286,64 @@ form {
   display: flex;
   align-items: center;
   .buy-button {
-    background-color: $brown;
-    color: $light;
+    background-color: transparent;
+    color: $brown;
     border-radius: 12px;
     min-height: 46px;
     padding: 11px 28px;
     text-transform: uppercase;
     font-family: 'Fixel';
     margin-right: 24px;
+    position: relative;
+    transition: all $delay;
+    overflow: hidden;
+    border: 1px solid $brown;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      width: 100%;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    &:hover {
+      color: $light;
+      &::before {
+        width: 100%;
+      }
+    }
+    &::before {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 0;
+      transition: all $delay;
+      position: absolute;
+      background-color: $brown;
+      content: '';
+    }
+    span {
+      position: relative;
+    }
   }
   .read-more {
     @extend .header__menu-list-link;
     color: $black !important;
+    padding: 0 !important;
+    border: none !important;
+    flex-shrink: 0;
     &::before {
+      display: none;
+    }
+    &::after {
       background-color: $black !important;
     }
   }

@@ -39,7 +39,7 @@ h2, .h2 {
     
   }
   @media(max-width: $sm){
-  
+    font-size: 24px;
   }
   @media(max-width: $xs){
   
@@ -64,7 +64,7 @@ h3, .h3 {
     
   }
   @media(max-width: $sm){
-  
+    font-size: 22px;
   }
   @media(max-width: $xs){
   
@@ -81,6 +81,22 @@ h4, .h4 {
   line-height: 130%; /* 20.8px */
   letter-spacing: 0.48px;
   text-transform: uppercase;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+    font-size: 14px;
+  }
+  @media(max-width: $xs){
+  
+  }
+  
 }
 
 h5, .h5 {
@@ -99,7 +115,7 @@ h6, .h6 {
   font-style: normal;
 }
 p {
-  font-size: 18px;
+  
   @media(max-width: $xl){
   
   }
@@ -107,7 +123,7 @@ p {
   
   }
   @media(max-width: $md){
-    font-size: 16px;
+    
   }
   @media(max-width: $sm){
   

@@ -9,6 +9,22 @@
   padding-bottom: 40px;
   color: $white;
   align-items: initial;
+  @media(max-width: $xl){
+    padding-bottom: 3vw;
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   .container {
 
   }
@@ -27,6 +43,24 @@
     margin-right: 0;
     margin-left: auto;
     position: relative;
+    margin-top: auto;
+    margin-bottom: 40px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      max-width: 267px;
+    }
+    
     &::before {
       top: 0;
       right: calc(100% + 15px);
@@ -46,28 +80,8 @@
   }
   &__blockquote {
     margin-bottom: 12px;
-    
-  }
-  &__sign {
-    img {
-
-    }
-  }
-  &__author {
-    color: $white;
-    display: flex;
-    align-items: flex-end;
-  }
-  &__author-post {
-    font-size: 32px;
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 1.6px;
-    line-height: 2.3;
-    margin-right: 50px;
     @media(max-width: $xl){
-      font-size: 2.3vw;
-      margin-right: 3.6vw;
+    
     }
     @media(max-width: $lg){
     
@@ -80,6 +94,63 @@
     }
     @media(max-width: $xs){
     
+    }
+    
+  }
+  &__sign {
+    text-align: right;
+    img {
+
+    }
+  }
+  &__author {
+    color: $white;
+    display: flex;
+    align-items: flex-end;
+    @media(max-width: $xl){
+      line-height: 12.5vw;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      flex-direction: column;
+    }
+    
+  }
+  &__author-post {
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1.6px;
+    line-height: 2.3;
+    margin-right: 50px;
+    @media(max-width: $xl){
+      font-size: 2.3vw;
+      margin-right: 3.6vw;
+      line-height: 7vw;
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      font-size: 3.9vw;
+      margin-right: 3vw;
+      line-height: 0vw;
+      top: 7vw;
+      position: relative;
     }
     
   }
@@ -97,7 +168,9 @@
     
     }
     @media(max-width: $xs){
-    
+      font-size: 16vw;
+      line-height: 15vw;
+      letter-spacing: 0.1vw;
     }
     
   }
@@ -113,10 +186,47 @@
     margin-bottom: 0;
     width: 25%;
     margin-bottom: -27px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      margin-bottom: 24px;
+      width: 100%;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__subtitle {
     text-indent: 25%;
     margin-bottom: 50px;
+    text-align: justify;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+      text-indent: 16.6%;
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      margin-bottom: 20px;
+      text-indent: 0;
+      font-size: 5.2vw;
+      
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   .row {
     & > * {
@@ -124,12 +234,42 @@
     }
   }
   &__img {
-
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+      margin-top: 32px;
+    }
+    
   }
   &__text {
     margin-bottom: 60px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+      margin-bottom: 30px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     p {
-      font-size: 16px;
       margin-bottom: 10px;
       &:last-child {
         margin-bottom: 0;
@@ -153,6 +293,7 @@
   }
   &__row {
     display: flex;
+    transition: all 0.1s;
     &:nth-of-type(odd) {
       
     }
@@ -162,6 +303,21 @@
         &:before {
           right: auto;
           left: calc(100% + 85px);
+          @media(max-width: $xl){
+      
+          }
+          @media(max-width: $lg){
+          
+          }
+          @media(max-width: $md){
+            left: calc(100% + 50px);
+          }
+          @media(max-width: $sm){
+          
+          }
+          @media(max-width: $xs){
+          
+          }
         }
       }
     }
@@ -171,6 +327,23 @@
     height: 110px;
     margin-right: 220px;
     position: relative;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      height: 90px;
+      margin-right: 150px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &::before {
       width: 50px;
       height: 20px;
@@ -182,7 +355,22 @@
       content: '';
       background: url(../img/svg/sigh_down.svg) center no-repeat;
       background-size: contain;
-
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        right: calc(100% + 50px);
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
     &:nth-of-type(odd) {
       &::before {
@@ -201,7 +389,7 @@
         }
         &__el-arrow {
           background-color: $dark-brown;
-          transition: all 0.5s;
+          transition: all $delay;
           &::before {
             transition-delay: 0.2s;
             transform: translateX(0%);
@@ -217,7 +405,7 @@
   &__el-logo {
     border: 1px solid rgba(207, 189, 178, 0.3);
     border-radius: 24px;
-    transition: all 0.5s;
+    transition: all $delay;
     display: flex;
     padding: 10px 15px;
     position: relative;
@@ -229,7 +417,7 @@
       left: 0;
       width: 0;
       background-color: $dark-brown;
-      transition: all 0.5s;
+      transition: all $delay;
       position: absolute;
     }
     &--pravda {
@@ -247,6 +435,22 @@
     width: 110px;
     position: relative;
     overflow: hidden;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      width: 90px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &::before,  &::after  {
       top: 0;
       bottom: 0;
@@ -257,7 +461,7 @@
       content: '';
       background-repeat: no-repeat;
       background-position: center;
-      transition: all 0.5s;
+      transition: all $delay;
       background-image: url(../img/svg/arrow-top-right-light.svg);
     }
     &::before {
@@ -273,6 +477,30 @@
 
 
 .books {
+  .books-row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    & > * {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
   .container {
 
   }
@@ -287,6 +515,9 @@
   }
   &__el {
     cursor: pointer;
+    max-width: 362px;
+    margin-left: auto;
+    margin-right: auto;
     a {
       display: block;
       color: $black;
@@ -320,7 +551,7 @@
   }
   &__el-img-container {
     border-radius: 0px;
-    transition: 0.5s all;
+    transition: $delay all;
     overflow: hidden;
     margin-bottom: 10px;
   }
@@ -338,13 +569,63 @@
     .books {
       &__el {
         margin-bottom: 100px;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+        
+        }
+        @media(max-width: $xs){
+          margin-bottom: 32px !important;
+        }
+        
         &:last-of-type {
           margin-bottom: 0;
         }
-        
+        .button-collapse {
+          display: none;
+          @media(max-width: $xl){
+          
+          }
+          @media(max-width: $lg){
+          
+          }
+          @media(max-width: $md){
+            display: flex;
+            
+          }
+          @media(max-width: $sm){
+          }
+          @media(max-width: $xs){
+          
+          }
+          
+        }
       }
       &__text {
         margin-bottom: 100px;
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+          margin-bottom: 32px;
+        }
+        @media(max-width: $sm){
+        }
+        @media(max-width: $xs){
+          
+        }
+        
       }
     }
   }
@@ -352,9 +633,40 @@
 
 
   &--section {
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      padding-top: 0;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
     
   .section__header {
     margin-bottom: 60px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-bottom: 32px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
     .section__title {
 
@@ -365,6 +677,7 @@
       }
       &__el {
         position: relative;
+        margin-bottom: 16px;
         .button-collapse {
           overflow: visible;
           &::before {
@@ -394,6 +707,22 @@
         font-weight: 500;
         margin-bottom: 4px;
         font-family: 'Fixel';
+        @media(max-width: $xl){
+        
+        }
+        @media(max-width: $lg){
+        
+        }
+        @media(max-width: $md){
+          
+        }
+        @media(max-width: $sm){
+          font-size: 16px;
+        }
+        @media(max-width: $xs){
+        
+        }
+        
       }
       &__el-price {
     
@@ -409,6 +738,23 @@
 
 
 .events {
+  min-height: auto;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    padding-top: 0;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   .section__title {
     color: $brown;
   }
@@ -422,11 +768,29 @@
   font-size: 14px;
   &__el {
     border-top: 1px solid transparentize($brown, 0.5);
-    transition: all 0.5s;
+    transition: all $delay;
     padding: 40px 0px;
     cursor: pointer;
+    position: relative;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      font-size: 12px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &:hover {
       border-color: $black !important;
+      z-index: 1;
       .events-list__address {
         color: $black;
       }
@@ -438,17 +802,84 @@
   .row {
     & > *:nth-of-type(1) {
       order: 1;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        order: 0;
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
     & > *:nth-of-type(2) {
       order: 0;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        order: 2;
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
     & > *:nth-of-type(3) {
       order: 2;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        order: 1;
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
   }
   &__el-main {
     position: relative;
     margin-top: -6px;
+    width: 749px;
+
+    @media(max-width: $xl){
+      width: 600px;
+    }
+    @media(max-width: $lg){
+      width: 550px;
+    }
+    @media(max-width: $md){
+      padding-left: 36px;
+      width: 100%;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     &::before {
       color: $brown;
       position: absolute;
@@ -457,26 +888,132 @@
       content: '(0' counter(event) ')';
       top: 7px;
       font-size: 14px;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        font-size: 12px;
+        top: 3px;
+        left: 0;
+        right: auto;
+
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
   }
   &__el-title {
+    width: 749px;
 
+    @media(max-width: $xl){
+      width: 600px;
+    }
+    @media(max-width: $lg){
+      width: 550px;
+    }
+    @media(max-width: $md){
+      margin-bottom: 8px;
+      width: 100%;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
+  &__el-hover {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: -75px;
+    width: auto;
+    right: 0;
+    left: auto;
+    margin-right: 0;
+    margin-left: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $delay;
+    @media(max-width: $md) {
+      display: none;
+    }
+    .events-list__el-title {
+      color: $white;
+      position: absolute;
+      top: 75px;
+      right: 0px;
+    }
   }
   &__el-img {
-    display: none;
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+    object-fit: cover;
+
   }
+
 
   &__date {
     text-transform: uppercase;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-top: 4px;
+      display: block;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     * {
       display: block;
+      @media(max-width: $md){
+        display: inline-block;
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
     }
   }
   &__address {
     color: $brown;
     text-transform: uppercase;
     font-style: normal;
-    transition: all 0.5s;
+    transition: all $delay;
+    text-align: right;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      text-align: left;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &.active {
     .events-list {
@@ -484,6 +1021,10 @@
         opacity: 0.2;
         &:hover {
           opacity: 1;
+          .events-list__el-hover { 
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }
@@ -502,8 +1043,29 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(../img/blog-mask.svg) center no-repeat;
+    background: url(../img/svg/blog-mask.svg) center no-repeat;
     background-size: cover;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      background-position: center 60%;
+    }
+    @media(max-width: $sm){
+      background-position: center 62%;
+    }
+    @media(max-width: $xs){
+      background-position: center 65%;
+    
+    }
+    @media(max-width: $xxs){
+      background-position: center 70%;
+    
+    }
+    
   }
   .container {
     position: relative;
@@ -511,6 +1073,22 @@
   .section__title {
     color: $light;
     margin-bottom: -16px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-bottom: 300px;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__content {
 
@@ -519,6 +1097,22 @@
     max-width: 66%;
     margin-left: auto;
     margin-right: auto;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      max-width: 80%;
+    }
+    @media(max-width: $sm){
+      max-width: 100%;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
     a {
       color: $light;
       display: block;
@@ -532,7 +1126,23 @@
   }
   &__el-description {
     display: flex;
-    padding-top: 16px;
+    padding-top: 8px;
+    @media(max-width: $xl){
+      
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      flex-direction: column;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__el-date {
     flex-shrink: 0;
@@ -542,6 +1152,24 @@
     font-family: 'Fixel';
     opacity: 0.5;
     padding-top: 4px;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      margin-right: 0;
+      margin-bottom: 6px;
+      
+    }
+    @media(max-width: $sm){
+      font-size: 12px;
+    }
+    @media(max-width: $xs){
+    
+    }
+    
   }
   &__el-text {
 
@@ -551,7 +1179,6 @@
     margin-bottom: 8px;
   }
   &__el-short {
-    font-size: 16px;
     font-family: 'Fixel';
     max-width: 420px;
     color: $white;
@@ -561,9 +1188,46 @@
 
 .socials {
   min-height: auto;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    padding-bottom: 0;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   .container {
     & > .row {
       justify-content: space-between;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        & > * {
+          margin-bottom: 32px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
   }
   .section__title {
@@ -579,7 +1243,7 @@
     }
   }
   &__title {
-    margin-bottom: 5px;
+    margin-bottom: 12px;
   }
   .socials-card {
     a {
@@ -601,7 +1265,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all 0.5s;
+      transition: all $delay;
       display: block;
     }
     .row {
@@ -659,7 +1323,33 @@
     padding-top: 15px;
     padding-bottom: 7px;
     border-top: 1px solid transparentize($brown, 0.5);
+    position: relative;
+    @media(max-width: $xl){
     
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      flex-direction: row !important;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    &::before {
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      background-color: $black;
+      content: '';
+      position: absolute;
+      transition: $delay all;
+      width: 0px;
+    }
     &:nth-of-type(odd) {
       flex-direction: row-reverse;
       .collabs-list__el-info {
@@ -700,10 +1390,47 @@
       display: flex;
       justify-content: space-between;
       flex-shrink: 0;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        flex-direction: column !important;
+      }
+      @media(max-width: $sm){
+      
+      }
+      @media(max-width: $xs){
+      
+      }
+      
     }
     .btn-container {
       display: flex;
       align-items: flex-start;
+      @media(max-width: $xl){
+      
+      }
+      @media(max-width: $lg){
+      
+      }
+      @media(max-width: $md){
+        
+      }
+      @media(max-width: $sm){
+        position: absolute;
+        right: 0;
+        top: 18px;
+      }
+      @media(max-width: $xs){
+      
+      }
+      @media(max-width: $xxs){
+        top: 3vw;
+      }
+      
     }
     .button-collapse {
       display: flex;
@@ -713,14 +1440,79 @@
       min-height: 36px;
       align-items: center;
       flex-shrink: 0;
+      &::before {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        content: '';
+        
+      }
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+      }
     }
   }
   &__el-name {
-
+    transition: all 1s;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      transform: none !important;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    @media(max-width: $xxs){
+      font-size: 7vw;
+    }
+    
   }
   &__el-post {
     opacity: 0.4;
     color: $brown;
+    transition: all 1s;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      transform: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    @media(max-width: $xxs){
+      font-size: 7vw;
+      min-height: 40px;
+    }
+    
+  }
+  &.active {
+    
+    .collabs-list {
+      &__el-post {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -728,6 +1520,22 @@
 
 .prefooter {
   padding: 0;
+  @media(max-width: $xl){
+  
+  }
+  @media(max-width: $lg){
+  
+  }
+  @media(max-width: $md){
+    min-height: auto;
+  }
+  @media(max-width: $sm){
+  
+  }
+  @media(max-width: $xs){
+  
+  }
+  
   &__content {
     width: 100%;
     img {

@@ -2,11 +2,27 @@
 html {
 	// overflow-x: hidden;
 	min-height: 100vh;
+	font-size: 16px;
+	@media(max-width: $xl){
+	
+	}
+	@media(max-width: $lg){
+	
+	}
+	@media(max-width: $md){
+		
+	}
+	@media(max-width: $sm){
+		font-size: 14px;
+	
+	}
+	@media(max-width: $xs){
+	}
+	
 }
 body {
 	background: $light;
 	color: $black;
-	font-size: 16px;
 	font-family: $mainFont;
 	font-weight: normal;
 	font-style: normal;
@@ -18,7 +34,11 @@ body {
 		overflow: hidden;
 	}
 }
-
+.main {
+	position: relative;
+	z-index: 1;
+	background-color: $light;
+}
 .container {
 	max-width: 1350px;
 	width: 100%;
@@ -34,6 +54,9 @@ body {
 	@include mq-inv-medium {
 		padding: 0 15px;
 	}
+}
+.overflow-hidden {
+	overflow: hidden;
 }
 .position-absolute {
 	position: absolute !important;
