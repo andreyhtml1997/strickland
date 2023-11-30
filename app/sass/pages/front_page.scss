@@ -1036,6 +1036,36 @@
 .blog {
   background: url(../img/blog-bg.jpg) center no-repeat;
   background-attachment: fixed;
+  &__mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/svg/blog-mask.svg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      background-position: center 60%;
+    }
+    @media(max-width: $sm){
+      background-position: center 62%;
+    }
+    @media(max-width: $xs){
+      background-position: center 65%;
+    
+    }
+    @media(max-width: $xxs){
+      background-position: center 70%;
+    
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -1045,6 +1075,7 @@
     right: 0;
     background: url(../img/svg/blog-mask.svg) center no-repeat;
     background-size: cover;
+    display: none;
     @media(max-width: $xl){
     
     }
@@ -1097,6 +1128,10 @@
     max-width: 66%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 200px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     @media(max-width: $xl){
     
     }
@@ -1188,6 +1223,7 @@
 
 .socials {
   min-height: auto;
+  background-color: $light;
   @media(max-width: $xl){
   
   }
@@ -1538,6 +1574,7 @@
   
   &__content {
     width: 100%;
+    transform-origin: top center;
     img {
       width: 100%;
       height: 100%;

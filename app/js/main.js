@@ -1,6 +1,28 @@
 // AOS.init();
+const set1VhInPx = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+set1VhInPx();
+const smoothAnchorScroll = function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      const offset = target.offsetTop - 70; // Add 60 pixels to the offsetTop
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+    });
+  });
+};
 
-function collabs_animation() {
+
+
+
+let prevScrollPos = window.pageYOffset;
+/* function collabs_animation() {
   if(document.querySelector('.collabs').getBoundingClientRect().bottom <= window.innerHeight) {
     document.querySelector('.collabs-list').classList.add('active');
     document.querySelectorAll('.collabs-list__el-post').forEach((el, i) => {
@@ -25,8 +47,7 @@ function collabs_animation() {
       text_el.style.transform = `translateX(0px)`;
     })
   }
-}
-
+} */
 
 function collabs_animation_mouseover() {
   
@@ -56,18 +77,80 @@ function collabs_animation_mouseleave() {
   })
 }
 
+function blog_animation() {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  let cards = gsap.utils.toArray(".blog__el");
+  let stackHeight = 150;
+  console.log(gsap.utils.checkPrefix("filter"))
+  cards.forEach((card, i) => {
+    gsap.fromTo(card, {
+      scale: 1,
+      transformOrigin: "center top",
+      filter: "blur(0px)",
+    }, {
+      y: gsap.utils.mapRange(1, cards.length, -20, -stackHeight + 220, cards.length - i),
+      scale: gsap.utils.mapRange(1, cards.lgthen, 0.4, 0.9, i),
+      //filter: "blur(" + gsap.utils.mapRange(1, cards.length, 4, 25, cards.length - i) + "px)",
+      scrollTrigger: {
+        trigger: card,
+        scrub: true,
+        start: "top " + stackHeight,
+        end: "+=" + window.innerHeight * 2,
+        invalidateOnRefresh: true
+      }
+    });
+    // pin separately because we want the pinning to last the whole length of the page, but the animation should only be part of it. 
+    ScrollTrigger.create({
+      trigger: card,
+      pin: true,
+      start: "top " + stackHeight,
+      endTrigger: ".collabs", // when the last card finishes its animation, unpin everything
+      end: "top " + (stackHeight + 100),
+      pinSpacing: false
+    });
+  });
+}
 
+function prefooter_animation() {
+  const prefooter_content = gsap.utils.toArray(".prefooter__content");
 
-
+  prefooter_content.forEach((image, i) => {
+      gsap.fromTo(
+          image,
+          { scale: 0.5 },
+          {
+              scale: 1,
+              ease: "none",
+              force3D: true,
+              scrollTrigger: {
+                  pin: ".prefooter",
+                  trigger: ".prefooter",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: 0.5,
+                  markers: false,
+              },
+          }
+      );
+  });
+}
+function footer_animation () {
+  document.querySelector('.main').style.marginBottom = `${document.querySelector('.footer').offsetHeight}px`;
+}
+blog_animation();
+prefooter_animation();
 
 window.onload = function () {
+  smoothAnchorScroll();
+  footer_animation();
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
     closeButton: false,
     dragToClose: false,
     Thumbs: false,
   });
-  document.querySelector('.main').style.marginBottom = `${document.querySelector('.footer').clientHeight}px`;
+  
 
   document.querySelectorAll('.collabs-list__el').forEach((el, i) => {
     el.addEventListener('mouseover', function(){
@@ -86,9 +169,14 @@ window.onload = function () {
   
   
   //Header toggle
-    document.querySelectorAll('.menu-toggle').forEach(el => el.addEventListener('click', function(){
+    document.querySelectorAll('.header__toggle').forEach(el => el.addEventListener('click', function(){
       document.querySelector('.header').classList.toggle('active');
       document.documentElement.classList.toggle('overflow-hidden');
+    }));
+
+    document.querySelectorAll('.header__menu-list-link .menu-toggle').forEach(el => el.addEventListener('click', function(){
+      document.querySelector('.header').classList.toggle('active');
+      document.documentElement.classList.remove('overflow-hidden');
     }));
     
 
@@ -103,8 +191,71 @@ window.onload = function () {
 
 
 window.onscroll = function(e) {
+  let current = "";
+  const sections = document.querySelectorAll(".smoothScrollEl");
+  const navLi = document.querySelectorAll(".header__menu-list-link");
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 70) {
+      if(section.getAttribute("id")) {
+        current = section.getAttribute("id"); 
+      }
+    }
+  });
+  navLi.forEach((li) => {
+    console.log(current);
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+	if(pageYOffset >= (document.body.clientHeight - document.documentElement.clientHeight)) {
+    navLi.forEach(el => {
+      el.classList.remove("active");
+      if(el.classList.contains('to-footer')){
+        el.classList.add("active")
+      }
+    })
+	}
 
 
+
+
+
+
+
+
+
+
+
+
+
+  if(window.scrollY > 0) {
+    document.querySelector('.header').classList.add('fixed');
+  } else {
+    document.querySelector('.header').classList.remove('fixed');
+  }
+
+  const blog = document.querySelector('.blog');
+  const blog_offset_top = document.querySelector('.blog').getBoundingClientRect().top;
+  const currentScrollPos = window.pageYOffset;
+  if(blog_offset_top <= 0 && blog_offset_top >= -document.querySelector('.blog').offsetHeight + window.innerHeight) {
+    document.querySelector('.blog__mask').style.position = 'fixed';
+    document.querySelector('.blog__mask').style.bottom = '0';
+    document.querySelector('.blog__mask').style.top = 'auto';
+  } else {
+    document.querySelector('.blog__mask').style.position = 'absolute';
+    if (blog_offset_top <= window.innerHeight && blog_offset_top >= -blog.innerHeight) {
+      // Scrolling down
+      document.querySelector('.blog__mask').style.bottom = 'auto';
+      document.querySelector('.blog__mask').style.top = '0';
+    } else if(blog_offset_top >= 0) {
+      document.querySelector('.blog__mask').style.bottom = 'auto';
+      document.querySelector('.blog__mask').style.top = '0';
+      // Scrolling up
+    }
+    prevScrollPos = currentScrollPos;
+  }
 
 	if(document.querySelector('.footer').offsetTop < document.documentElement.clientHeight + e.currentTarget.pageYOffset) {
 		document.querySelector('.toTop').classList.add('position-absolute');
@@ -142,7 +293,8 @@ const press_row = document.querySelector('.press__row');
 }
 
 window.onresize = function(e) {
-  document.querySelector('.main').style.marginBottom = `${document.querySelector('.footer').clientHeight}px`;
+  
+  footer_animation();
 }
 
 

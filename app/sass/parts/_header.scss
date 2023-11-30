@@ -5,6 +5,8 @@
   right: 0;
   z-index: 2;
   padding: 40px 0;
+  background-color: transparent;
+  transition: all 0.5s;
   @media(max-width: $xl){
   
   }
@@ -20,7 +22,28 @@
   @media(max-width: $xs){
   
   }
-  
+  &.fixed {
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $dark-brown;
+    @media(max-width: $xl){
+    
+    }
+    @media(max-width: $lg){
+    
+    }
+    @media(max-width: $md){
+      padding: 7px 0;
+    }
+    @media(max-width: $sm){
+    
+    }
+    @media(max-width: $xs){
+    
+    }
+    
+  }
   .container {
     display: flex;
     justify-content: space-between;
@@ -176,7 +199,7 @@
       transition-timing-function: cubic-bezier(.215,.61,.355,1);
       will-change: transform;
     }
-    &:hover {
+    &:hover, &.active {
       &::after {
         transform: scaleX(1);
         transform-origin: 0 0;
