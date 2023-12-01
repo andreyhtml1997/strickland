@@ -69,6 +69,7 @@ b, strong {
 	background-color: $light;
 	overflow: hidden;
 	min-height: 100vh;
+	min-height: calc(var(--vh,1vh) * 100);
 	display: flex;
 	align-items: center;
 	padding-top: 150px;
@@ -92,7 +93,25 @@ b, strong {
 	@media(max-width: $xs){
 	
 	}
-	
+	&--text {
+		padding-top: 60px;
+		@media(max-width: $xl){
+		
+		}
+		@media(max-width: $lg){
+		
+		}
+		@media(max-width: $md){
+			
+		}
+		@media(max-width: $sm){
+			padding-top: 30px;
+		}
+		@media(max-width: $xs){
+		
+		}
+		
+	}
   &__header {
     display: flex;
 		margin-bottom: 90px;

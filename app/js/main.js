@@ -88,9 +88,11 @@ function blog_animation() {
       scale: 1,
       transformOrigin: "center top",
       filter: "blur(0px)",
+      opacity: 1
     }, {
       y: gsap.utils.mapRange(1, cards.length, -20, -stackHeight + 220, cards.length - i),
       scale: gsap.utils.mapRange(1, cards.lgthen, 0.4, 0.9, i),
+      opacity: gsap.utils.mapRange(1, cards.lgthen, 0, 0, i),
       //filter: "blur(" + gsap.utils.mapRange(1, cards.length, 4, 25, cards.length - i) + "px)",
       scrollTrigger: {
         trigger: card,
@@ -126,7 +128,7 @@ function prefooter_animation() {
               scrollTrigger: {
                   pin: ".prefooter",
                   trigger: ".prefooter",
-                  start: "top top",
+                  start: "top 60px",
                   end: "bottom top",
                   scrub: 0.5,
                   markers: false,
@@ -163,9 +165,9 @@ window.onload = function () {
     })
   });
   //Preloader
-    /* document.querySelector('.preloader').classList.add('hidden');
-    // document.querySelector('html').classList.remove('overflow-hidden');
-    document.querySelector('body').classList.remove('overflow-hidden'); */
+    document.querySelector('.preloader').classList.add('hidden');
+    document.querySelector('html').classList.remove('overflow-hidden');
+    document.querySelector('body').classList.remove('overflow-hidden');
   
   
   //Header toggle
@@ -191,6 +193,7 @@ window.onload = function () {
 
 
 window.onscroll = function(e) {
+  footer_animation();
   let current = "";
   const sections = document.querySelectorAll(".smoothScrollEl");
   const navLi = document.querySelectorAll(".header__menu-list-link");
@@ -203,7 +206,6 @@ window.onscroll = function(e) {
     }
   });
   navLi.forEach((li) => {
-    console.log(current);
     li.classList.remove("active");
     if (li.classList.contains(current)) {
       li.classList.add("active");
@@ -236,7 +238,11 @@ window.onscroll = function(e) {
     document.querySelector('.header').classList.remove('fixed');
   }
 
-  const blog = document.querySelector('.blog');
+
+
+
+const blog = document.querySelector('.blog');
+if(blog) {
   const blog_offset_top = document.querySelector('.blog').getBoundingClientRect().top;
   const currentScrollPos = window.pageYOffset;
   if(blog_offset_top <= 0 && blog_offset_top >= -document.querySelector('.blog').offsetHeight + window.innerHeight) {
@@ -256,6 +262,10 @@ window.onscroll = function(e) {
     }
     prevScrollPos = currentScrollPos;
   }
+}
+
+
+
 
 	if(document.querySelector('.footer').offsetTop < document.documentElement.clientHeight + e.currentTarget.pageYOffset) {
 		document.querySelector('.toTop').classList.add('position-absolute');
@@ -293,7 +303,7 @@ const press_row = document.querySelector('.press__row');
 }
 
 window.onresize = function(e) {
-  
+  set1VhInPx();
   footer_animation();
 }
 
@@ -348,12 +358,14 @@ if(button_collapses) {
 
 
 const events_list = document.querySelector('.events-list');
-events_list.addEventListener('mouseover', function(e) {
-  e.currentTarget.classList.add('active');
-});
-events_list.addEventListener('mouseleave', function(e) {
-  e.currentTarget.classList.remove('active');
-});
+if(events_list) {
+  events_list.addEventListener('mouseover', function(e) {
+    e.currentTarget.classList.add('active');
+  });
+  events_list.addEventListener('mouseleave', function(e) {
+    e.currentTarget.classList.remove('active');
+  });
+}
 
 
 
@@ -365,3 +377,7 @@ document.querySelector('.inline-form input').addEventListener('focus', function(
 document.querySelector('.inline-form input').addEventListener('focusout', function(e){
   e.currentTarget.closest('.inline-form').classList.remove('active');
 })
+
+
+
+let sticky = new Sticky('.sticky');

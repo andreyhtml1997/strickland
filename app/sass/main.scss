@@ -2,6 +2,7 @@
 html {
 	// overflow-x: hidden;
 	min-height: 100vh;
+	min-height: calc(var(--vh,1vh) * 100);
 	font-size: 16px;
 	@media(max-width: $xl){
 	
@@ -29,10 +30,17 @@ body {
 	// width: 100vw;
 	overflow-x: hidden;
 	min-height: 100vh;
+	min-height: calc(var(--vh,1vh) * 100);
 	line-height: 1.5;
 	&.ovf_hidden {
 		overflow: hidden;
 	}
+}
+.mw-100 {
+	max-width: 100% !important;
+}
+.w-100 {
+	width: 100% !important;
 }
 .main {
 	position: relative;

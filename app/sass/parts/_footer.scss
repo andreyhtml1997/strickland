@@ -261,10 +261,10 @@
 
   }
   &__link {
-    width: 50px;
-    height: 50px;
-    border: 1px solid $brown;
-    border-radius: 100px;
+    width: 48px;
+    height: 48px;
+    border: transparent solid $brown;
+    border-radius: 0px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -313,6 +313,13 @@
       &::after {
         transition-delay: 0s;
         transform: translateX(100%);
+      }
+    }
+  }
+  &--brown {
+    svg {
+      path {
+        stroke: $brown;
       }
     }
   }
